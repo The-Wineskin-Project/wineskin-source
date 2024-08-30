@@ -7,8 +7,3 @@
 //
 
 #import "VMMLogUtility.h"
-
-void NSStackTraceLog(void)
-{
-    NSDebugLog(@"%@",[NSThread callStackSymbols]);
-}

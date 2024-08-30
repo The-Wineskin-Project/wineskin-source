@@ -16,15 +16,6 @@
     [self replaceOccurrencesOfString:target withString:replacement options:0 range:NSMakeRange(0, self.length)];
 }
 
--(void)replaceOccurrencesOfRegex:(nonnull NSString *)target withString:(nonnull NSString *)replacement
-{
-    NSRange range = NSMakeRange(0, self.length);
-    NSArray<NSString*>* matches = [self componentsMatchingWithRegex:target];
-    for (NSString* match in matches) {
-        [self replaceOccurrencesOfString:match withString:replacement options:0 range:range];
-    }
-}
-
 -(nonnull NSMutableString*)trim
 {
     // We used to use the method below, but the method in use today is about 2 to 5 times faster

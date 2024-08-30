@@ -7,88 +7,37 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4E0DE40E1FC703A2004AA363 /* NSTimer+Extension.h in Headers */ = {isa = PBXBuildFile; fileRef = 4E0DE40C1FC703A2004AA363 /* NSTimer+Extension.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		4E0DE40F1FC703A2004AA363 /* NSTimer+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E0DE40D1FC703A2004AA363 /* NSTimer+Extension.m */; };
-		4E1181591FB200E800D8029F /* VMMView.h in Headers */ = {isa = PBXBuildFile; fileRef = 4E1181571FB200E800D8029F /* VMMView.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		4E11815A1FB200E800D8029F /* VMMView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E1181581FB200E800D8029F /* VMMView.m */; };
-		4E231F931F8191DD00148A30 /* VMMDeviceSimulator.h in Headers */ = {isa = PBXBuildFile; fileRef = 4E231F911F8191DD00148A30 /* VMMDeviceSimulator.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		4E231F941F8191DD00148A30 /* VMMDeviceSimulator.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E231F921F8191DD00148A30 /* VMMDeviceSimulator.m */; };
-		4E2462F32207793F00E5C02B /* VMMMenu.h in Headers */ = {isa = PBXBuildFile; fileRef = 4E2462F12207793F00E5C02B /* VMMMenu.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		4E2462F42207793F00E5C02B /* VMMMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E2462F22207793F00E5C02B /* VMMMenu.m */; };
 		4E34B2F41FD879DE001F0B4F /* VMMLocalizationUtility.h in Headers */ = {isa = PBXBuildFile; fileRef = 4E0DD3B81FD878F90033AA72 /* VMMLocalizationUtility.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4E37704B20517EB300AADB8A /* VMMPropertyList.h in Headers */ = {isa = PBXBuildFile; fileRef = 4E37704920517EB300AADB8A /* VMMPropertyList.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4E37704C20517EB300AADB8A /* VMMPropertyList.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E37704A20517EB300AADB8A /* VMMPropertyList.m */; };
-		4E3771061FA7A57C00E2F511 /* VMMWebView.h in Headers */ = {isa = PBXBuildFile; fileRef = 4E3771041FA7A57C00E2F511 /* VMMWebView.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		4E3771071FA7A57C00E2F511 /* VMMWebView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E3771051FA7A57C00E2F511 /* VMMWebView.m */; };
-		4E3BD7031FAD2FCF00AF8418 /* VMMUUID.h in Headers */ = {isa = PBXBuildFile; fileRef = 4E3BD7011FAD2FCF00AF8418 /* VMMUUID.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		4E3BD7041FAD2FCF00AF8418 /* VMMUUID.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E3BD7021FAD2FCF00AF8418 /* VMMUUID.m */; };
-		4E53A8A61F8587D90038BDFE /* NSScreen+Extension.h in Headers */ = {isa = PBXBuildFile; fileRef = 4E53A8A41F8587D90038BDFE /* NSScreen+Extension.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		4E53A8A71F8587D90038BDFE /* NSScreen+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E53A8A51F8587D90038BDFE /* NSScreen+Extension.m */; };
-		4E5A45D91FC9FD7800FCEB42 /* VMMDockProgressIndicator.h in Headers */ = {isa = PBXBuildFile; fileRef = 4E5A45D71FC9FD7800FCEB42 /* VMMDockProgressIndicator.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		4E5A45DA1FC9FD7800FCEB42 /* VMMDockProgressIndicator.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E5A45D81FC9FD7800FCEB42 /* VMMDockProgressIndicator.m */; };
 		4E5A45DD1FCA103800FCEB42 /* NSBundle+Extension.h in Headers */ = {isa = PBXBuildFile; fileRef = 4E5A45DB1FCA103800FCEB42 /* NSBundle+Extension.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4E5A45DE1FCA103800FCEB42 /* NSBundle+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E5A45DC1FCA103800FCEB42 /* NSBundle+Extension.m */; };
 		4E66CA72214D54CF004293A5 /* ObjCExtensionConfig.h in Headers */ = {isa = PBXBuildFile; fileRef = 4EAA1FB9212D8A27006F1445 /* ObjCExtensionConfig.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4E6C51111F7E8EB700A187E9 /* ObjectiveC_Extension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E6C51071F7E8EB700A187E9 /* ObjectiveC_Extension.framework */; };
-		4E6C51161F7E8EB700A187E9 /* ObjectiveC_ExtensionTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E6C51151F7E8EB700A187E9 /* ObjectiveC_ExtensionTests.m */; };
 		4E6C51181F7E8EB700A187E9 /* ObjectiveC_Extension.h in Headers */ = {isa = PBXBuildFile; fileRef = 4E6C510A1F7E8EB700A187E9 /* ObjectiveC_Extension.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		4E6C51EA1F7E90A300A187E9 /* VMMVirtualKeycode.h in Headers */ = {isa = PBXBuildFile; fileRef = 4E6C51E41F7E90A300A187E9 /* VMMVirtualKeycode.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		4E6C51EB1F7E90A300A187E9 /* VMMVirtualKeycode.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E6C51E51F7E90A300A187E9 /* VMMVirtualKeycode.m */; };
-		4E6C51EC1F7E90A300A187E9 /* VMMDeviceObserver.h in Headers */ = {isa = PBXBuildFile; fileRef = 4E6C51E61F7E90A300A187E9 /* VMMDeviceObserver.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		4E6C51ED1F7E90A300A187E9 /* VMMDeviceObserver.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E6C51E71F7E90A300A187E9 /* VMMDeviceObserver.m */; };
-		4E6C51EE1F7E90A300A187E9 /* VMMUsageKeycode.h in Headers */ = {isa = PBXBuildFile; fileRef = 4E6C51E81F7E90A300A187E9 /* VMMUsageKeycode.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		4E6C51EF1F7E90A300A187E9 /* VMMUsageKeycode.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E6C51E91F7E90A300A187E9 /* VMMUsageKeycode.m */; };
 		4E6C521F1F7E911000A187E9 /* VMMAlert.h in Headers */ = {isa = PBXBuildFile; fileRef = 4E6C51F11F7E911000A187E9 /* VMMAlert.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4E6C52201F7E911000A187E9 /* VMMAlert.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E6C51F21F7E911000A187E9 /* VMMAlert.m */; };
 		4E6C52211F7E911000A187E9 /* NSArray+Extension.h in Headers */ = {isa = PBXBuildFile; fileRef = 4E6C51F31F7E911000A187E9 /* NSArray+Extension.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4E6C52221F7E911000A187E9 /* NSArray+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E6C51F41F7E911000A187E9 /* NSArray+Extension.m */; };
-		4E6C52231F7E911000A187E9 /* NSAttributedString+Extension.h in Headers */ = {isa = PBXBuildFile; fileRef = 4E6C51F51F7E911000A187E9 /* NSAttributedString+Extension.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		4E6C52241F7E911000A187E9 /* NSAttributedString+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E6C51F61F7E911000A187E9 /* NSAttributedString+Extension.m */; };
-		4E6C52251F7E911000A187E9 /* NSColor+Extension.h in Headers */ = {isa = PBXBuildFile; fileRef = 4E6C51F71F7E911000A187E9 /* NSColor+Extension.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		4E6C52261F7E911000A187E9 /* NSColor+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E6C51F81F7E911000A187E9 /* NSColor+Extension.m */; };
 		4E6C52271F7E911000A187E9 /* NSData+Extension.h in Headers */ = {isa = PBXBuildFile; fileRef = 4E6C51F91F7E911000A187E9 /* NSData+Extension.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4E6C52281F7E911000A187E9 /* NSData+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E6C51FA1F7E911000A187E9 /* NSData+Extension.m */; };
-		4E6C52291F7E911000A187E9 /* NSDateFormatter+Extension.h in Headers */ = {isa = PBXBuildFile; fileRef = 4E6C51FB1F7E911000A187E9 /* NSDateFormatter+Extension.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		4E6C522A1F7E911000A187E9 /* NSDateFormatter+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E6C51FC1F7E911000A187E9 /* NSDateFormatter+Extension.m */; };
 		4E6C522B1F7E911000A187E9 /* NSFileManager+Extension.h in Headers */ = {isa = PBXBuildFile; fileRef = 4E6C51FD1F7E911000A187E9 /* NSFileManager+Extension.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4E6C522C1F7E911000A187E9 /* NSFileManager+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E6C51FE1F7E911000A187E9 /* NSFileManager+Extension.m */; };
 		4E6C522D1F7E911000A187E9 /* NSImage+Extension.h in Headers */ = {isa = PBXBuildFile; fileRef = 4E6C51FF1F7E911000A187E9 /* NSImage+Extension.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4E6C522E1F7E911000A187E9 /* NSImage+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E6C52001F7E911000A187E9 /* NSImage+Extension.m */; };
-		4E6C52311F7E911000A187E9 /* NSMenuItem+Extension.h in Headers */ = {isa = PBXBuildFile; fileRef = 4E6C52031F7E911000A187E9 /* NSMenuItem+Extension.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		4E6C52321F7E911000A187E9 /* NSMenuItem+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E6C52041F7E911000A187E9 /* NSMenuItem+Extension.m */; };
 		4E6C52331F7E911000A187E9 /* NSMutableArray+Extension.h in Headers */ = {isa = PBXBuildFile; fileRef = 4E6C52051F7E911000A187E9 /* NSMutableArray+Extension.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4E6C52341F7E911000A187E9 /* NSMutableArray+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E6C52061F7E911000A187E9 /* NSMutableArray+Extension.m */; };
 		4E6C52351F7E911000A187E9 /* NSMutableAttributedString+Extension.h in Headers */ = {isa = PBXBuildFile; fileRef = 4E6C52071F7E911000A187E9 /* NSMutableAttributedString+Extension.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4E6C52361F7E911000A187E9 /* NSMutableAttributedString+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E6C52081F7E911000A187E9 /* NSMutableAttributedString+Extension.m */; };
 		4E6C52371F7E911000A187E9 /* NSMutableDictionary+Extension.h in Headers */ = {isa = PBXBuildFile; fileRef = 4E6C52091F7E911000A187E9 /* NSMutableDictionary+Extension.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4E6C52381F7E911000A187E9 /* NSMutableDictionary+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E6C520A1F7E911000A187E9 /* NSMutableDictionary+Extension.m */; };
-		4E6C52391F7E911000A187E9 /* NSMutableURLRequest+Extension.h in Headers */ = {isa = PBXBuildFile; fileRef = 4E6C520B1F7E911000A187E9 /* NSMutableURLRequest+Extension.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		4E6C523A1F7E911000A187E9 /* NSMutableURLRequest+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E6C520C1F7E911000A187E9 /* NSMutableURLRequest+Extension.m */; };
-		4E6C523B1F7E911000A187E9 /* NSRunningApplication+Extension.h in Headers */ = {isa = PBXBuildFile; fileRef = 4E6C520D1F7E911000A187E9 /* NSRunningApplication+Extension.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		4E6C523C1F7E911000A187E9 /* NSRunningApplication+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E6C520E1F7E911000A187E9 /* NSRunningApplication+Extension.m */; };
-		4E6C523D1F7E911000A187E9 /* NSSavePanel+Extension.h in Headers */ = {isa = PBXBuildFile; fileRef = 4E6C520F1F7E911000A187E9 /* NSSavePanel+Extension.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		4E6C523E1F7E911000A187E9 /* NSSavePanel+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E6C52101F7E911000A187E9 /* NSSavePanel+Extension.m */; };
 		4E6C523F1F7E911000A187E9 /* NSString+Extension.h in Headers */ = {isa = PBXBuildFile; fileRef = 4E6C52111F7E911000A187E9 /* NSString+Extension.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4E6C52401F7E911000A187E9 /* NSString+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E6C52121F7E911000A187E9 /* NSString+Extension.m */; };
 		4E6C52411F7E911000A187E9 /* NSTask+Extension.h in Headers */ = {isa = PBXBuildFile; fileRef = 4E6C52131F7E911000A187E9 /* NSTask+Extension.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4E6C52421F7E911000A187E9 /* NSTask+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E6C52141F7E911000A187E9 /* NSTask+Extension.m */; };
-		4E6C52431F7E911000A187E9 /* NSText+Extension.h in Headers */ = {isa = PBXBuildFile; fileRef = 4E6C52151F7E911000A187E9 /* NSText+Extension.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		4E6C52441F7E911000A187E9 /* NSText+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E6C52161F7E911000A187E9 /* NSText+Extension.m */; };
 		4E6C52451F7E911000A187E9 /* NSThread+Extension.h in Headers */ = {isa = PBXBuildFile; fileRef = 4E6C52171F7E911000A187E9 /* NSThread+Extension.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4E6C52461F7E911000A187E9 /* NSThread+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E6C52181F7E911000A187E9 /* NSThread+Extension.m */; };
-		4E6C52471F7E911000A187E9 /* NSUnarchiver+Extension.h in Headers */ = {isa = PBXBuildFile; fileRef = 4E6C52191F7E911000A187E9 /* NSUnarchiver+Extension.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		4E6C52481F7E911000A187E9 /* NSUnarchiver+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E6C521A1F7E911000A187E9 /* NSUnarchiver+Extension.m */; };
-		4E6C52491F7E911000A187E9 /* NSUserDefaults+Extension.h in Headers */ = {isa = PBXBuildFile; fileRef = 4E6C521B1F7E911000A187E9 /* NSUserDefaults+Extension.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		4E6C524A1F7E911000A187E9 /* NSUserDefaults+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E6C521C1F7E911000A187E9 /* NSUserDefaults+Extension.m */; };
-		4E6C524B1F7E911000A187E9 /* NSView+Extension.h in Headers */ = {isa = PBXBuildFile; fileRef = 4E6C521D1F7E911000A187E9 /* NSView+Extension.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		4E6C524C1F7E911000A187E9 /* NSView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E6C521E1F7E911000A187E9 /* NSView+Extension.m */; };
-		4E6C525D1F7E944F00A187E9 /* SZJsonParser.h in Headers */ = {isa = PBXBuildFile; fileRef = 4E6C525B1F7E944F00A187E9 /* SZJsonParser.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		4E6C525E1F7E944F00A187E9 /* SZJsonParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E6C525C1F7E944F00A187E9 /* SZJsonParser.m */; };
-		4E6C52681F7E953A00A187E9 /* NKFTPManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 4E6C52611F7E953A00A187E9 /* NKFTPManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		4E6C52691F7E953A00A187E9 /* NKFTPManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E6C52621F7E953A00A187E9 /* NKFTPManager.m */; };
 		4E6C526A1F7E953A00A187E9 /* VMMLogUtility.h in Headers */ = {isa = PBXBuildFile; fileRef = 4E6C52631F7E953A00A187E9 /* VMMLogUtility.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		4E6C526B1F7E953A00A187E9 /* VMMUserNotificationCenter.h in Headers */ = {isa = PBXBuildFile; fileRef = 4E6C52641F7E953A00A187E9 /* VMMUserNotificationCenter.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		4E6C526C1F7E953A00A187E9 /* VMMUserNotificationCenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E6C52651F7E953A00A187E9 /* VMMUserNotificationCenter.m */; };
 		4E6C526D1F7E953A00A187E9 /* VMMVersion.h in Headers */ = {isa = PBXBuildFile; fileRef = 4E6C52661F7E953A00A187E9 /* VMMVersion.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4E6C526E1F7E953A00A187E9 /* VMMVersion.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E6C52671F7E953A00A187E9 /* VMMVersion.m */; };
 		4E6C52711F7E954D00A187E9 /* VMMComputerInformation.h in Headers */ = {isa = PBXBuildFile; fileRef = 4E6C526F1F7E954D00A187E9 /* VMMComputerInformation.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -98,30 +47,13 @@
 		4E6C52791F7E9E1400A187E9 /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E6C52781F7E9E1400A187E9 /* IOKit.framework */; };
 		4E6C527B1F7E9E4000A187E9 /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E6C527A1F7E9E4000A187E9 /* CoreImage.framework */; };
 		4E6C527D1F7E9E4C00A187E9 /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E6C527C1F7E9E4C00A187E9 /* Carbon.framework */; };
-		4E6C52881F7EA42700A187E9 /* NSArrayTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E6C52851F7EA42700A187E9 /* NSArrayTests.m */; };
-		4E6C52891F7EA42700A187E9 /* NSStringTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E6C52861F7EA42700A187E9 /* NSStringTests.m */; };
 		4E6C52941F7EB50300A187E9 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4E6C52961F7EB50300A187E9 /* Localizable.strings */; };
 		4E7D41B921665F2C001BEADB /* VMMVideoCardManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 4E7D41B721665F2C001BEADB /* VMMVideoCardManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4E7D41BA21665F2C001BEADB /* VMMVideoCardManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E7D41B821665F2C001BEADB /* VMMVideoCardManager.m */; };
-		4E9986701FEEC85600E434E4 /* NSApplication+Extension.h in Headers */ = {isa = PBXBuildFile; fileRef = 4E99866E1FEEC85600E434E4 /* NSApplication+Extension.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		4E9986711FEEC85600E434E4 /* NSApplication+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E99866F1FEEC85600E434E4 /* NSApplication+Extension.m */; };
-		4EA035A81F9532E10059C2C5 /* VMMKeyCaptureField.h in Headers */ = {isa = PBXBuildFile; fileRef = 4EA035A61F9532E10059C2C5 /* VMMKeyCaptureField.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		4EA035A91F9532E10059C2C5 /* VMMKeyCaptureField.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EA035A71F9532E10059C2C5 /* VMMKeyCaptureField.m */; };
-		4EA69BD41FC8DDEA00C70100 /* NSWorkspace+Extension.h in Headers */ = {isa = PBXBuildFile; fileRef = 4EA69BD21FC8DDEA00C70100 /* NSWorkspace+Extension.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		4EA69BD51FC8DDEA00C70100 /* NSWorkspace+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EA69BD31FC8DDEA00C70100 /* NSWorkspace+Extension.m */; };
-		4EAD49251FBBB5AE008B562F /* NSColorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EAD49241FBBB5AE008B562F /* NSColorTests.m */; };
-		4EB392E11FC479060098F987 /* VMMTextFileView.h in Headers */ = {isa = PBXBuildFile; fileRef = 4EB392DF1FC479060098F987 /* VMMTextFileView.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		4EB392E21FC479060098F987 /* VMMTextFileView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EB392E01FC479060098F987 /* VMMTextFileView.m */; };
-		4ECB93A620289E4B00F0A369 /* VMMParentalControls.h in Headers */ = {isa = PBXBuildFile; fileRef = 4ECB93A420289E4B00F0A369 /* VMMParentalControls.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		4ECB93A720289E4B00F0A369 /* VMMParentalControls.m in Sources */ = {isa = PBXBuildFile; fileRef = 4ECB93A520289E4B00F0A369 /* VMMParentalControls.m */; };
 		4EE52847205EC3560005F335 /* VMMVideoCard.h in Headers */ = {isa = PBXBuildFile; fileRef = 4EE52845205EC3560005F335 /* VMMVideoCard.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4EE52848205EC3560005F335 /* VMMVideoCard.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EE52846205EC3560005F335 /* VMMVideoCard.m */; };
 		4EEBF4701FAE238F00CE31A0 /* NSMutableString+Extension.h in Headers */ = {isa = PBXBuildFile; fileRef = 4EEBF46E1FAE238F00CE31A0 /* NSMutableString+Extension.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4EEBF4711FAE238F00CE31A0 /* NSMutableString+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EEBF46F1FAE238F00CE31A0 /* NSMutableString+Extension.m */; };
-		4EF16B1F1F8E36A600A78DC0 /* VMMModals.h in Headers */ = {isa = PBXBuildFile; fileRef = 4EF16B1D1F8E36A600A78DC0 /* VMMModals.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		4EF16B201F8E36A600A78DC0 /* VMMModals.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EF16B1E1F8E36A600A78DC0 /* VMMModals.m */; };
-		4EFA51931FE96C8C002D68FC /* NSException+Extension.h in Headers */ = {isa = PBXBuildFile; fileRef = 4EFA51911FE96C8C002D68FC /* NSException+Extension.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		4EFA51941FE96C8C002D68FC /* NSException+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EFA51921FE96C8C002D68FC /* NSException+Extension.m */; };
 		4EFA51961FE9710B002D68FC /* VMMLogUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EFA51951FE9710B002D68FC /* VMMLogUtility.m */; };
 /* End PBXBuildFile section */
 
@@ -137,91 +69,39 @@
 
 /* Begin PBXFileReference section */
 		4E0DD3B81FD878F90033AA72 /* VMMLocalizationUtility.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VMMLocalizationUtility.h; sourceTree = "<group>"; };
-		4E0DE40C1FC703A2004AA363 /* NSTimer+Extension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSTimer+Extension.h"; sourceTree = "<group>"; };
-		4E0DE40D1FC703A2004AA363 /* NSTimer+Extension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSTimer+Extension.m"; sourceTree = "<group>"; };
-		4E1181571FB200E800D8029F /* VMMView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VMMView.h; sourceTree = "<group>"; };
-		4E1181581FB200E800D8029F /* VMMView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VMMView.m; sourceTree = "<group>"; };
-		4E231F911F8191DD00148A30 /* VMMDeviceSimulator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VMMDeviceSimulator.h; sourceTree = "<group>"; };
-		4E231F921F8191DD00148A30 /* VMMDeviceSimulator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VMMDeviceSimulator.m; sourceTree = "<group>"; };
-		4E2462F12207793F00E5C02B /* VMMMenu.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VMMMenu.h; sourceTree = "<group>"; };
-		4E2462F22207793F00E5C02B /* VMMMenu.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VMMMenu.m; sourceTree = "<group>"; };
 		4E37704920517EB300AADB8A /* VMMPropertyList.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VMMPropertyList.h; sourceTree = "<group>"; };
 		4E37704A20517EB300AADB8A /* VMMPropertyList.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VMMPropertyList.m; sourceTree = "<group>"; };
-		4E3771041FA7A57C00E2F511 /* VMMWebView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VMMWebView.h; sourceTree = "<group>"; };
-		4E3771051FA7A57C00E2F511 /* VMMWebView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VMMWebView.m; sourceTree = "<group>"; };
-		4E3BD7011FAD2FCF00AF8418 /* VMMUUID.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VMMUUID.h; sourceTree = "<group>"; };
-		4E3BD7021FAD2FCF00AF8418 /* VMMUUID.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VMMUUID.m; sourceTree = "<group>"; };
 		4E3EE4641F82BF42008A5CC3 /* CREDITS */ = {isa = PBXFileReference; lastKnownFileType = text; path = CREDITS; sourceTree = "<group>"; };
 		4E4CD93720897CF5008CF4F7 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
-		4E53A8A41F8587D90038BDFE /* NSScreen+Extension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSScreen+Extension.h"; sourceTree = "<group>"; };
-		4E53A8A51F8587D90038BDFE /* NSScreen+Extension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSScreen+Extension.m"; sourceTree = "<group>"; };
-		4E5A45D71FC9FD7800FCEB42 /* VMMDockProgressIndicator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VMMDockProgressIndicator.h; sourceTree = "<group>"; };
-		4E5A45D81FC9FD7800FCEB42 /* VMMDockProgressIndicator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VMMDockProgressIndicator.m; sourceTree = "<group>"; };
 		4E5A45DB1FCA103800FCEB42 /* NSBundle+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSBundle+Extension.h"; sourceTree = "<group>"; };
 		4E5A45DC1FCA103800FCEB42 /* NSBundle+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSBundle+Extension.m"; sourceTree = "<group>"; };
 		4E6C51071F7E8EB700A187E9 /* ObjectiveC_Extension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ObjectiveC_Extension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4E6C510A1F7E8EB700A187E9 /* ObjectiveC_Extension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ObjectiveC_Extension.h; sourceTree = "<group>"; };
 		4E6C510B1F7E8EB700A187E9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4E6C51101F7E8EB700A187E9 /* ObjectiveC_ExtensionTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ObjectiveC_ExtensionTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		4E6C51151F7E8EB700A187E9 /* ObjectiveC_ExtensionTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ObjectiveC_ExtensionTests.m; sourceTree = "<group>"; };
-		4E6C51171F7E8EB700A187E9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		4E6C51E41F7E90A300A187E9 /* VMMVirtualKeycode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VMMVirtualKeycode.h; sourceTree = "<group>"; };
-		4E6C51E51F7E90A300A187E9 /* VMMVirtualKeycode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VMMVirtualKeycode.m; sourceTree = "<group>"; };
-		4E6C51E61F7E90A300A187E9 /* VMMDeviceObserver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VMMDeviceObserver.h; sourceTree = "<group>"; };
-		4E6C51E71F7E90A300A187E9 /* VMMDeviceObserver.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VMMDeviceObserver.m; sourceTree = "<group>"; };
-		4E6C51E81F7E90A300A187E9 /* VMMUsageKeycode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VMMUsageKeycode.h; sourceTree = "<group>"; };
-		4E6C51E91F7E90A300A187E9 /* VMMUsageKeycode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VMMUsageKeycode.m; sourceTree = "<group>"; };
 		4E6C51F11F7E911000A187E9 /* VMMAlert.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VMMAlert.h; sourceTree = "<group>"; };
 		4E6C51F21F7E911000A187E9 /* VMMAlert.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VMMAlert.m; sourceTree = "<group>"; };
 		4E6C51F31F7E911000A187E9 /* NSArray+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+Extension.h"; sourceTree = "<group>"; };
 		4E6C51F41F7E911000A187E9 /* NSArray+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+Extension.m"; sourceTree = "<group>"; };
-		4E6C51F51F7E911000A187E9 /* NSAttributedString+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSAttributedString+Extension.h"; sourceTree = "<group>"; };
-		4E6C51F61F7E911000A187E9 /* NSAttributedString+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSAttributedString+Extension.m"; sourceTree = "<group>"; };
-		4E6C51F71F7E911000A187E9 /* NSColor+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSColor+Extension.h"; sourceTree = "<group>"; };
-		4E6C51F81F7E911000A187E9 /* NSColor+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSColor+Extension.m"; sourceTree = "<group>"; };
 		4E6C51F91F7E911000A187E9 /* NSData+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+Extension.h"; sourceTree = "<group>"; };
 		4E6C51FA1F7E911000A187E9 /* NSData+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+Extension.m"; sourceTree = "<group>"; };
-		4E6C51FB1F7E911000A187E9 /* NSDateFormatter+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDateFormatter+Extension.h"; sourceTree = "<group>"; };
-		4E6C51FC1F7E911000A187E9 /* NSDateFormatter+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDateFormatter+Extension.m"; sourceTree = "<group>"; };
 		4E6C51FD1F7E911000A187E9 /* NSFileManager+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSFileManager+Extension.h"; sourceTree = "<group>"; };
 		4E6C51FE1F7E911000A187E9 /* NSFileManager+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSFileManager+Extension.m"; sourceTree = "<group>"; };
 		4E6C51FF1F7E911000A187E9 /* NSImage+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSImage+Extension.h"; sourceTree = "<group>"; };
 		4E6C52001F7E911000A187E9 /* NSImage+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSImage+Extension.m"; sourceTree = "<group>"; };
-		4E6C52031F7E911000A187E9 /* NSMenuItem+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMenuItem+Extension.h"; sourceTree = "<group>"; };
-		4E6C52041F7E911000A187E9 /* NSMenuItem+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMenuItem+Extension.m"; sourceTree = "<group>"; };
 		4E6C52051F7E911000A187E9 /* NSMutableArray+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableArray+Extension.h"; sourceTree = "<group>"; };
 		4E6C52061F7E911000A187E9 /* NSMutableArray+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableArray+Extension.m"; sourceTree = "<group>"; };
 		4E6C52071F7E911000A187E9 /* NSMutableAttributedString+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableAttributedString+Extension.h"; sourceTree = "<group>"; };
 		4E6C52081F7E911000A187E9 /* NSMutableAttributedString+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableAttributedString+Extension.m"; sourceTree = "<group>"; };
 		4E6C52091F7E911000A187E9 /* NSMutableDictionary+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableDictionary+Extension.h"; sourceTree = "<group>"; };
 		4E6C520A1F7E911000A187E9 /* NSMutableDictionary+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableDictionary+Extension.m"; sourceTree = "<group>"; };
-		4E6C520B1F7E911000A187E9 /* NSMutableURLRequest+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableURLRequest+Extension.h"; sourceTree = "<group>"; };
-		4E6C520C1F7E911000A187E9 /* NSMutableURLRequest+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableURLRequest+Extension.m"; sourceTree = "<group>"; };
-		4E6C520D1F7E911000A187E9 /* NSRunningApplication+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSRunningApplication+Extension.h"; sourceTree = "<group>"; };
-		4E6C520E1F7E911000A187E9 /* NSRunningApplication+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSRunningApplication+Extension.m"; sourceTree = "<group>"; };
-		4E6C520F1F7E911000A187E9 /* NSSavePanel+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSSavePanel+Extension.h"; sourceTree = "<group>"; };
-		4E6C52101F7E911000A187E9 /* NSSavePanel+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSSavePanel+Extension.m"; sourceTree = "<group>"; };
 		4E6C52111F7E911000A187E9 /* NSString+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Extension.h"; sourceTree = "<group>"; };
 		4E6C52121F7E911000A187E9 /* NSString+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Extension.m"; sourceTree = "<group>"; };
 		4E6C52131F7E911000A187E9 /* NSTask+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSTask+Extension.h"; sourceTree = "<group>"; };
 		4E6C52141F7E911000A187E9 /* NSTask+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSTask+Extension.m"; sourceTree = "<group>"; };
-		4E6C52151F7E911000A187E9 /* NSText+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSText+Extension.h"; sourceTree = "<group>"; };
-		4E6C52161F7E911000A187E9 /* NSText+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSText+Extension.m"; sourceTree = "<group>"; };
 		4E6C52171F7E911000A187E9 /* NSThread+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSThread+Extension.h"; sourceTree = "<group>"; };
 		4E6C52181F7E911000A187E9 /* NSThread+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSThread+Extension.m"; sourceTree = "<group>"; };
-		4E6C52191F7E911000A187E9 /* NSUnarchiver+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSUnarchiver+Extension.h"; sourceTree = "<group>"; };
-		4E6C521A1F7E911000A187E9 /* NSUnarchiver+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSUnarchiver+Extension.m"; sourceTree = "<group>"; };
-		4E6C521B1F7E911000A187E9 /* NSUserDefaults+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSUserDefaults+Extension.h"; sourceTree = "<group>"; };
-		4E6C521C1F7E911000A187E9 /* NSUserDefaults+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSUserDefaults+Extension.m"; sourceTree = "<group>"; };
-		4E6C521D1F7E911000A187E9 /* NSView+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSView+Extension.h"; sourceTree = "<group>"; };
-		4E6C521E1F7E911000A187E9 /* NSView+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSView+Extension.m"; sourceTree = "<group>"; };
-		4E6C525B1F7E944F00A187E9 /* SZJsonParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SZJsonParser.h; sourceTree = "<group>"; };
-		4E6C525C1F7E944F00A187E9 /* SZJsonParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SZJsonParser.m; sourceTree = "<group>"; };
-		4E6C52611F7E953A00A187E9 /* NKFTPManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NKFTPManager.h; sourceTree = "<group>"; };
-		4E6C52621F7E953A00A187E9 /* NKFTPManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NKFTPManager.m; sourceTree = "<group>"; };
 		4E6C52631F7E953A00A187E9 /* VMMLogUtility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VMMLogUtility.h; sourceTree = "<group>"; };
-		4E6C52641F7E953A00A187E9 /* VMMUserNotificationCenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VMMUserNotificationCenter.h; sourceTree = "<group>"; };
-		4E6C52651F7E953A00A187E9 /* VMMUserNotificationCenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VMMUserNotificationCenter.m; sourceTree = "<group>"; };
 		4E6C52661F7E953A00A187E9 /* VMMVersion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VMMVersion.h; sourceTree = "<group>"; };
 		4E6C52671F7E953A00A187E9 /* VMMVersion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VMMVersion.m; sourceTree = "<group>"; };
 		4E6C526F1F7E954D00A187E9 /* VMMComputerInformation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VMMComputerInformation.h; sourceTree = "<group>"; };
@@ -231,8 +111,6 @@
 		4E6C52781F7E9E1400A187E9 /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = System/Library/Frameworks/IOKit.framework; sourceTree = SDKROOT; };
 		4E6C527A1F7E9E4000A187E9 /* CoreImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreImage.framework; path = System/Library/Frameworks/CoreImage.framework; sourceTree = SDKROOT; };
 		4E6C527C1F7E9E4C00A187E9 /* Carbon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Carbon.framework; path = System/Library/Frameworks/Carbon.framework; sourceTree = SDKROOT; };
-		4E6C52851F7EA42700A187E9 /* NSArrayTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSArrayTests.m; sourceTree = "<group>"; };
-		4E6C52861F7EA42700A187E9 /* NSStringTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSStringTests.m; sourceTree = "<group>"; };
 		4E6C52951F7EB50300A187E9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		4E6C52971F7EB51D00A187E9 /* nl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = nl; path = nl.lproj/Localizable.strings; sourceTree = "<group>"; };
 		4E6C52981F7EB52100A187E9 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -240,28 +118,13 @@
 		4E6C529A1F7EB52A00A187E9 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
 		4E7D41B721665F2C001BEADB /* VMMVideoCardManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VMMVideoCardManager.h; sourceTree = "<group>"; };
 		4E7D41B821665F2C001BEADB /* VMMVideoCardManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VMMVideoCardManager.m; sourceTree = "<group>"; };
-		4E99866E1FEEC85600E434E4 /* NSApplication+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSApplication+Extension.h"; sourceTree = "<group>"; };
-		4E99866F1FEEC85600E434E4 /* NSApplication+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSApplication+Extension.m"; sourceTree = "<group>"; };
 		4E9C67642180C43800F6C17E /* Metal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Metal.framework; path = System/Library/Frameworks/Metal.framework; sourceTree = SDKROOT; };
-		4EA035A61F9532E10059C2C5 /* VMMKeyCaptureField.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VMMKeyCaptureField.h; sourceTree = "<group>"; };
-		4EA035A71F9532E10059C2C5 /* VMMKeyCaptureField.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VMMKeyCaptureField.m; sourceTree = "<group>"; };
-		4EA69BD21FC8DDEA00C70100 /* NSWorkspace+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSWorkspace+Extension.h"; sourceTree = "<group>"; };
-		4EA69BD31FC8DDEA00C70100 /* NSWorkspace+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSWorkspace+Extension.m"; sourceTree = "<group>"; };
 		4EAA1FB9212D8A27006F1445 /* ObjCExtensionConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ObjCExtensionConfig.h; sourceTree = "<group>"; };
-		4EAD49241FBBB5AE008B562F /* NSColorTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NSColorTests.m; sourceTree = "<group>"; };
-		4EB392DF1FC479060098F987 /* VMMTextFileView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VMMTextFileView.h; sourceTree = "<group>"; };
-		4EB392E01FC479060098F987 /* VMMTextFileView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VMMTextFileView.m; sourceTree = "<group>"; };
-		4ECB93A420289E4B00F0A369 /* VMMParentalControls.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VMMParentalControls.h; sourceTree = "<group>"; };
-		4ECB93A520289E4B00F0A369 /* VMMParentalControls.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VMMParentalControls.m; sourceTree = "<group>"; };
 		4ED18760206BF11F002BF81C /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		4EE52845205EC3560005F335 /* VMMVideoCard.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VMMVideoCard.h; sourceTree = "<group>"; };
 		4EE52846205EC3560005F335 /* VMMVideoCard.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VMMVideoCard.m; sourceTree = "<group>"; };
 		4EEBF46E1FAE238F00CE31A0 /* NSMutableString+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableString+Extension.h"; sourceTree = "<group>"; };
 		4EEBF46F1FAE238F00CE31A0 /* NSMutableString+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableString+Extension.m"; sourceTree = "<group>"; };
-		4EF16B1D1F8E36A600A78DC0 /* VMMModals.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VMMModals.h; sourceTree = "<group>"; };
-		4EF16B1E1F8E36A600A78DC0 /* VMMModals.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VMMModals.m; sourceTree = "<group>"; };
-		4EFA51911FE96C8C002D68FC /* NSException+Extension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSException+Extension.h"; sourceTree = "<group>"; };
-		4EFA51921FE96C8C002D68FC /* NSException+Extension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSException+Extension.m"; sourceTree = "<group>"; };
 		4EFA51951FE9710B002D68FC /* VMMLogUtility.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VMMLogUtility.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -294,7 +157,6 @@
 			children = (
 				4ED18760206BF11F002BF81C /* README.md */,
 				4E6C51091F7E8EB700A187E9 /* ObjectiveC_Extension */,
-				4E6C51141F7E8EB700A187E9 /* ObjectiveC_ExtensionTests */,
 				4E6C51081F7E8EB700A187E9 /* Products */,
 				4E6C52731F7E9D6400A187E9 /* Frameworks */,
 			);
@@ -312,9 +174,7 @@
 		4E6C51091F7E8EB700A187E9 /* ObjectiveC_Extension */ = {
 			isa = PBXGroup;
 			children = (
-				4E6C51E31F7E908800A187E9 /* Devices */,
 				4E6C51F01F7E90B800A187E9 /* Extensions */,
-				4E6C525A1F7E943900A187E9 /* Legacy */,
 				4E6C52601F7E950900A187E9 /* Utilities */,
 				4EA035A51F9532C80059C2C5 /* Views */,
 				4E6C52961F7EB50300A187E9 /* Localizable.strings */,
@@ -326,56 +186,19 @@
 			path = ObjectiveC_Extension;
 			sourceTree = "<group>";
 		};
-		4E6C51141F7E8EB700A187E9 /* ObjectiveC_ExtensionTests */ = {
-			isa = PBXGroup;
-			children = (
-				4E6C527E1F7EA3E500A187E9 /* Functions */,
-				4E6C51151F7E8EB700A187E9 /* ObjectiveC_ExtensionTests.m */,
-				4E6C51171F7E8EB700A187E9 /* Info.plist */,
-			);
-			path = ObjectiveC_ExtensionTests;
-			sourceTree = "<group>";
-		};
-		4E6C51E31F7E908800A187E9 /* Devices */ = {
-			isa = PBXGroup;
-			children = (
-				4E6C51E61F7E90A300A187E9 /* VMMDeviceObserver.h */,
-				4E6C51E71F7E90A300A187E9 /* VMMDeviceObserver.m */,
-				4E231F911F8191DD00148A30 /* VMMDeviceSimulator.h */,
-				4E231F921F8191DD00148A30 /* VMMDeviceSimulator.m */,
-				4E6C51E81F7E90A300A187E9 /* VMMUsageKeycode.h */,
-				4E6C51E91F7E90A300A187E9 /* VMMUsageKeycode.m */,
-				4E6C51E41F7E90A300A187E9 /* VMMVirtualKeycode.h */,
-				4E6C51E51F7E90A300A187E9 /* VMMVirtualKeycode.m */,
-			);
-			name = Devices;
-			sourceTree = "<group>";
-		};
 		4E6C51F01F7E90B800A187E9 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				4E99866E1FEEC85600E434E4 /* NSApplication+Extension.h */,
-				4E99866F1FEEC85600E434E4 /* NSApplication+Extension.m */,
 				4E6C51F31F7E911000A187E9 /* NSArray+Extension.h */,
 				4E6C51F41F7E911000A187E9 /* NSArray+Extension.m */,
-				4E6C51F51F7E911000A187E9 /* NSAttributedString+Extension.h */,
-				4E6C51F61F7E911000A187E9 /* NSAttributedString+Extension.m */,
 				4E5A45DB1FCA103800FCEB42 /* NSBundle+Extension.h */,
 				4E5A45DC1FCA103800FCEB42 /* NSBundle+Extension.m */,
-				4E6C51F71F7E911000A187E9 /* NSColor+Extension.h */,
-				4E6C51F81F7E911000A187E9 /* NSColor+Extension.m */,
 				4E6C51F91F7E911000A187E9 /* NSData+Extension.h */,
 				4E6C51FA1F7E911000A187E9 /* NSData+Extension.m */,
-				4E6C51FB1F7E911000A187E9 /* NSDateFormatter+Extension.h */,
-				4E6C51FC1F7E911000A187E9 /* NSDateFormatter+Extension.m */,
-				4EFA51911FE96C8C002D68FC /* NSException+Extension.h */,
-				4EFA51921FE96C8C002D68FC /* NSException+Extension.m */,
 				4E6C51FD1F7E911000A187E9 /* NSFileManager+Extension.h */,
 				4E6C51FE1F7E911000A187E9 /* NSFileManager+Extension.m */,
 				4E6C51FF1F7E911000A187E9 /* NSImage+Extension.h */,
 				4E6C52001F7E911000A187E9 /* NSImage+Extension.m */,
-				4E6C52031F7E911000A187E9 /* NSMenuItem+Extension.h */,
-				4E6C52041F7E911000A187E9 /* NSMenuItem+Extension.m */,
 				4E6C52051F7E911000A187E9 /* NSMutableArray+Extension.h */,
 				4E6C52061F7E911000A187E9 /* NSMutableArray+Extension.m */,
 				4E6C52071F7E911000A187E9 /* NSMutableAttributedString+Extension.h */,
@@ -384,50 +207,19 @@
 				4E6C520A1F7E911000A187E9 /* NSMutableDictionary+Extension.m */,
 				4EEBF46E1FAE238F00CE31A0 /* NSMutableString+Extension.h */,
 				4EEBF46F1FAE238F00CE31A0 /* NSMutableString+Extension.m */,
-				4E6C520B1F7E911000A187E9 /* NSMutableURLRequest+Extension.h */,
-				4E6C520C1F7E911000A187E9 /* NSMutableURLRequest+Extension.m */,
-				4E6C520D1F7E911000A187E9 /* NSRunningApplication+Extension.h */,
-				4E6C520E1F7E911000A187E9 /* NSRunningApplication+Extension.m */,
-				4E6C520F1F7E911000A187E9 /* NSSavePanel+Extension.h */,
-				4E6C52101F7E911000A187E9 /* NSSavePanel+Extension.m */,
-				4E53A8A41F8587D90038BDFE /* NSScreen+Extension.h */,
-				4E53A8A51F8587D90038BDFE /* NSScreen+Extension.m */,
 				4E6C52111F7E911000A187E9 /* NSString+Extension.h */,
 				4E6C52121F7E911000A187E9 /* NSString+Extension.m */,
 				4E6C52131F7E911000A187E9 /* NSTask+Extension.h */,
 				4E6C52141F7E911000A187E9 /* NSTask+Extension.m */,
-				4E6C52151F7E911000A187E9 /* NSText+Extension.h */,
-				4E6C52161F7E911000A187E9 /* NSText+Extension.m */,
 				4E6C52171F7E911000A187E9 /* NSThread+Extension.h */,
 				4E6C52181F7E911000A187E9 /* NSThread+Extension.m */,
-				4E0DE40C1FC703A2004AA363 /* NSTimer+Extension.h */,
-				4E0DE40D1FC703A2004AA363 /* NSTimer+Extension.m */,
-				4E6C52191F7E911000A187E9 /* NSUnarchiver+Extension.h */,
-				4E6C521A1F7E911000A187E9 /* NSUnarchiver+Extension.m */,
-				4E6C521B1F7E911000A187E9 /* NSUserDefaults+Extension.h */,
-				4E6C521C1F7E911000A187E9 /* NSUserDefaults+Extension.m */,
-				4E6C521D1F7E911000A187E9 /* NSView+Extension.h */,
-				4E6C521E1F7E911000A187E9 /* NSView+Extension.m */,
-				4EA69BD21FC8DDEA00C70100 /* NSWorkspace+Extension.h */,
-				4EA69BD31FC8DDEA00C70100 /* NSWorkspace+Extension.m */,
 			);
 			name = Extensions;
-			sourceTree = "<group>";
-		};
-		4E6C525A1F7E943900A187E9 /* Legacy */ = {
-			isa = PBXGroup;
-			children = (
-				4E6C525B1F7E944F00A187E9 /* SZJsonParser.h */,
-				4E6C525C1F7E944F00A187E9 /* SZJsonParser.m */,
-			);
-			name = Legacy;
 			sourceTree = "<group>";
 		};
 		4E6C52601F7E950900A187E9 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
-				4E6C52611F7E953A00A187E9 /* NKFTPManager.h */,
-				4E6C52621F7E953A00A187E9 /* NKFTPManager.m */,
 				4E7D41B721665F2C001BEADB /* VMMVideoCardManager.h */,
 				4E7D41B821665F2C001BEADB /* VMMVideoCardManager.m */,
 				4EE52845205EC3560005F335 /* VMMVideoCard.h */,
@@ -437,16 +229,8 @@
 				4E0DD3B81FD878F90033AA72 /* VMMLocalizationUtility.h */,
 				4E6C52631F7E953A00A187E9 /* VMMLogUtility.h */,
 				4EFA51951FE9710B002D68FC /* VMMLogUtility.m */,
-				4EF16B1D1F8E36A600A78DC0 /* VMMModals.h */,
-				4EF16B1E1F8E36A600A78DC0 /* VMMModals.m */,
-				4ECB93A420289E4B00F0A369 /* VMMParentalControls.h */,
-				4ECB93A520289E4B00F0A369 /* VMMParentalControls.m */,
 				4E37704920517EB300AADB8A /* VMMPropertyList.h */,
 				4E37704A20517EB300AADB8A /* VMMPropertyList.m */,
-				4E6C52641F7E953A00A187E9 /* VMMUserNotificationCenter.h */,
-				4E6C52651F7E953A00A187E9 /* VMMUserNotificationCenter.m */,
-				4E3BD7011FAD2FCF00AF8418 /* VMMUUID.h */,
-				4E3BD7021FAD2FCF00AF8418 /* VMMUUID.m */,
 				4E6C52661F7E953A00A187E9 /* VMMVersion.h */,
 				4E6C52671F7E953A00A187E9 /* VMMVersion.m */,
 			);
@@ -467,33 +251,11 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		4E6C527E1F7EA3E500A187E9 /* Functions */ = {
-			isa = PBXGroup;
-			children = (
-				4E6C52851F7EA42700A187E9 /* NSArrayTests.m */,
-				4EAD49241FBBB5AE008B562F /* NSColorTests.m */,
-				4E6C52861F7EA42700A187E9 /* NSStringTests.m */,
-			);
-			name = Functions;
-			sourceTree = "<group>";
-		};
 		4EA035A51F9532C80059C2C5 /* Views */ = {
 			isa = PBXGroup;
 			children = (
 				4E6C51F11F7E911000A187E9 /* VMMAlert.h */,
 				4E6C51F21F7E911000A187E9 /* VMMAlert.m */,
-				4E5A45D71FC9FD7800FCEB42 /* VMMDockProgressIndicator.h */,
-				4E5A45D81FC9FD7800FCEB42 /* VMMDockProgressIndicator.m */,
-				4EA035A61F9532E10059C2C5 /* VMMKeyCaptureField.h */,
-				4EA035A71F9532E10059C2C5 /* VMMKeyCaptureField.m */,
-				4E2462F12207793F00E5C02B /* VMMMenu.h */,
-				4E2462F22207793F00E5C02B /* VMMMenu.m */,
-				4EB392DF1FC479060098F987 /* VMMTextFileView.h */,
-				4EB392E01FC479060098F987 /* VMMTextFileView.m */,
-				4E1181571FB200E800D8029F /* VMMView.h */,
-				4E1181581FB200E800D8029F /* VMMView.m */,
-				4E3771041FA7A57C00E2F511 /* VMMWebView.h */,
-				4E3771051FA7A57C00E2F511 /* VMMWebView.m */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -507,58 +269,26 @@
 			files = (
 				4E66CA72214D54CF004293A5 /* ObjCExtensionConfig.h in Headers */,
 				4E6C521F1F7E911000A187E9 /* VMMAlert.h in Headers */,
-				4E9986701FEEC85600E434E4 /* NSApplication+Extension.h in Headers */,
 				4E6C52211F7E911000A187E9 /* NSArray+Extension.h in Headers */,
-				4E6C52231F7E911000A187E9 /* NSAttributedString+Extension.h in Headers */,
 				4E5A45DD1FCA103800FCEB42 /* NSBundle+Extension.h in Headers */,
-				4E6C52251F7E911000A187E9 /* NSColor+Extension.h in Headers */,
 				4E6C52271F7E911000A187E9 /* NSData+Extension.h in Headers */,
-				4E6C52291F7E911000A187E9 /* NSDateFormatter+Extension.h in Headers */,
-				4EFA51931FE96C8C002D68FC /* NSException+Extension.h in Headers */,
 				4E6C522B1F7E911000A187E9 /* NSFileManager+Extension.h in Headers */,
 				4E6C522D1F7E911000A187E9 /* NSImage+Extension.h in Headers */,
-				4E6C52311F7E911000A187E9 /* NSMenuItem+Extension.h in Headers */,
 				4E6C52331F7E911000A187E9 /* NSMutableArray+Extension.h in Headers */,
 				4E6C52351F7E911000A187E9 /* NSMutableAttributedString+Extension.h in Headers */,
 				4E6C52371F7E911000A187E9 /* NSMutableDictionary+Extension.h in Headers */,
 				4EEBF4701FAE238F00CE31A0 /* NSMutableString+Extension.h in Headers */,
-				4E6C52391F7E911000A187E9 /* NSMutableURLRequest+Extension.h in Headers */,
-				4E6C523B1F7E911000A187E9 /* NSRunningApplication+Extension.h in Headers */,
-				4E6C523D1F7E911000A187E9 /* NSSavePanel+Extension.h in Headers */,
-				4E53A8A61F8587D90038BDFE /* NSScreen+Extension.h in Headers */,
 				4E6C523F1F7E911000A187E9 /* NSString+Extension.h in Headers */,
 				4E6C52411F7E911000A187E9 /* NSTask+Extension.h in Headers */,
-				4E6C52431F7E911000A187E9 /* NSText+Extension.h in Headers */,
-				4E0DE40E1FC703A2004AA363 /* NSTimer+Extension.h in Headers */,
 				4E6C52451F7E911000A187E9 /* NSThread+Extension.h in Headers */,
-				4E6C52471F7E911000A187E9 /* NSUnarchiver+Extension.h in Headers */,
-				4E6C52491F7E911000A187E9 /* NSUserDefaults+Extension.h in Headers */,
-				4E6C524B1F7E911000A187E9 /* NSView+Extension.h in Headers */,
-				4EA69BD41FC8DDEA00C70100 /* NSWorkspace+Extension.h in Headers */,
 				4E6C52711F7E954D00A187E9 /* VMMComputerInformation.h in Headers */,
-				4E6C51EC1F7E90A300A187E9 /* VMMDeviceObserver.h in Headers */,
-				4E231F931F8191DD00148A30 /* VMMDeviceSimulator.h in Headers */,
-				4E5A45D91FC9FD7800FCEB42 /* VMMDockProgressIndicator.h in Headers */,
-				4EA035A81F9532E10059C2C5 /* VMMKeyCaptureField.h in Headers */,
 				4E34B2F41FD879DE001F0B4F /* VMMLocalizationUtility.h in Headers */,
 				4E6C526A1F7E953A00A187E9 /* VMMLogUtility.h in Headers */,
-				4EF16B1F1F8E36A600A78DC0 /* VMMModals.h in Headers */,
-				4ECB93A620289E4B00F0A369 /* VMMParentalControls.h in Headers */,
 				4E37704B20517EB300AADB8A /* VMMPropertyList.h in Headers */,
-				4EB392E11FC479060098F987 /* VMMTextFileView.h in Headers */,
-				4E6C51EE1F7E90A300A187E9 /* VMMUsageKeycode.h in Headers */,
-				4E6C526B1F7E953A00A187E9 /* VMMUserNotificationCenter.h in Headers */,
-				4E3BD7031FAD2FCF00AF8418 /* VMMUUID.h in Headers */,
 				4E6C526D1F7E953A00A187E9 /* VMMVersion.h in Headers */,
 				4EE52847205EC3560005F335 /* VMMVideoCard.h in Headers */,
-				4E2462F32207793F00E5C02B /* VMMMenu.h in Headers */,
 				4E7D41B921665F2C001BEADB /* VMMVideoCardManager.h in Headers */,
-				4E1181591FB200E800D8029F /* VMMView.h in Headers */,
-				4E6C51EA1F7E90A300A187E9 /* VMMVirtualKeycode.h in Headers */,
-				4E3771061FA7A57C00E2F511 /* VMMWebView.h in Headers */,
-				4E6C52681F7E953A00A187E9 /* NKFTPManager.h in Headers */,
 				4E6C51181F7E8EB700A187E9 /* ObjectiveC_Extension.h in Headers */,
-				4E6C525D1F7E944F00A187E9 /* SZJsonParser.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -669,55 +399,23 @@
 			buildActionMask = 2147483647;
 			files = (
 				4E6C52281F7E911000A187E9 /* NSData+Extension.m in Sources */,
-				4E6C52441F7E911000A187E9 /* NSText+Extension.m in Sources */,
 				4E5A45DE1FCA103800FCEB42 /* NSBundle+Extension.m in Sources */,
-				4E6C526C1F7E953A00A187E9 /* VMMUserNotificationCenter.m in Sources */,
-				4E3BD7041FAD2FCF00AF8418 /* VMMUUID.m in Sources */,
-				4E6C52261F7E911000A187E9 /* NSColor+Extension.m in Sources */,
-				4EF16B201F8E36A600A78DC0 /* VMMModals.m in Sources */,
-				4EA69BD51FC8DDEA00C70100 /* NSWorkspace+Extension.m in Sources */,
-				4E6C523C1F7E911000A187E9 /* NSRunningApplication+Extension.m in Sources */,
 				4E6C522C1F7E911000A187E9 /* NSFileManager+Extension.m in Sources */,
 				4E6C52381F7E911000A187E9 /* NSMutableDictionary+Extension.m in Sources */,
-				4E0DE40F1FC703A2004AA363 /* NSTimer+Extension.m in Sources */,
-				4E11815A1FB200E800D8029F /* VMMView.m in Sources */,
 				4E6C522E1F7E911000A187E9 /* NSImage+Extension.m in Sources */,
 				4E6C52461F7E911000A187E9 /* NSThread+Extension.m in Sources */,
-				4EB392E21FC479060098F987 /* VMMTextFileView.m in Sources */,
-				4EFA51941FE96C8C002D68FC /* NSException+Extension.m in Sources */,
-				4E6C524A1F7E911000A187E9 /* NSUserDefaults+Extension.m in Sources */,
-				4E6C51EB1F7E90A300A187E9 /* VMMVirtualKeycode.m in Sources */,
-				4E6C523E1F7E911000A187E9 /* NSSavePanel+Extension.m in Sources */,
-				4E6C523A1F7E911000A187E9 /* NSMutableURLRequest+Extension.m in Sources */,
-				4E6C52481F7E911000A187E9 /* NSUnarchiver+Extension.m in Sources */,
 				4E6C52341F7E911000A187E9 /* NSMutableArray+Extension.m in Sources */,
-				4E3771071FA7A57C00E2F511 /* VMMWebView.m in Sources */,
-				4E6C52321F7E911000A187E9 /* NSMenuItem+Extension.m in Sources */,
-				4E2462F42207793F00E5C02B /* VMMMenu.m in Sources */,
-				4E9986711FEEC85600E434E4 /* NSApplication+Extension.m in Sources */,
-				4E6C52691F7E953A00A187E9 /* NKFTPManager.m in Sources */,
 				4E6C52721F7E954D00A187E9 /* VMMComputerInformation.m in Sources */,
 				4E7D41BA21665F2C001BEADB /* VMMVideoCardManager.m in Sources */,
 				4E6C52361F7E911000A187E9 /* NSMutableAttributedString+Extension.m in Sources */,
 				4E6C52221F7E911000A187E9 /* NSArray+Extension.m in Sources */,
-				4E6C51ED1F7E90A300A187E9 /* VMMDeviceObserver.m in Sources */,
 				4E6C52421F7E911000A187E9 /* NSTask+Extension.m in Sources */,
-				4E231F941F8191DD00148A30 /* VMMDeviceSimulator.m in Sources */,
-				4ECB93A720289E4B00F0A369 /* VMMParentalControls.m in Sources */,
 				4EEBF4711FAE238F00CE31A0 /* NSMutableString+Extension.m in Sources */,
-				4E53A8A71F8587D90038BDFE /* NSScreen+Extension.m in Sources */,
-				4E6C51EF1F7E90A300A187E9 /* VMMUsageKeycode.m in Sources */,
 				4E6C52401F7E911000A187E9 /* NSString+Extension.m in Sources */,
 				4EFA51961FE9710B002D68FC /* VMMLogUtility.m in Sources */,
 				4EE52848205EC3560005F335 /* VMMVideoCard.m in Sources */,
-				4EA035A91F9532E10059C2C5 /* VMMKeyCaptureField.m in Sources */,
-				4E6C522A1F7E911000A187E9 /* NSDateFormatter+Extension.m in Sources */,
 				4E6C52201F7E911000A187E9 /* VMMAlert.m in Sources */,
-				4E6C524C1F7E911000A187E9 /* NSView+Extension.m in Sources */,
-				4E6C52241F7E911000A187E9 /* NSAttributedString+Extension.m in Sources */,
 				4E6C526E1F7E953A00A187E9 /* VMMVersion.m in Sources */,
-				4E6C525E1F7E944F00A187E9 /* SZJsonParser.m in Sources */,
-				4E5A45DA1FC9FD7800FCEB42 /* VMMDockProgressIndicator.m in Sources */,
 				4E37704C20517EB300AADB8A /* VMMPropertyList.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -726,10 +424,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4EAD49251FBBB5AE008B562F /* NSColorTests.m in Sources */,
-				4E6C52881F7EA42700A187E9 /* NSArrayTests.m in Sources */,
-				4E6C52891F7EA42700A187E9 /* NSStringTests.m in Sources */,
-				4E6C51161F7E8EB700A187E9 /* ObjectiveC_ExtensionTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -16,18 +16,11 @@
 {
     return [[self mutableCopy] map:newObjectForObject];
 }
--(nonnull NSMutableArray*)mapWithIndex:(_Nullable id (^_Nonnull)(id _Nonnull object, NSUInteger index))newObjectForObject
-{
-    return [[self mutableCopy] mapWithIndex:newObjectForObject];
-}
 -(nonnull NSMutableArray*)filter:(BOOL (^_Nonnull)(id _Nonnull object))newObjectForObject
 {
     return [[self mutableCopy] filter:newObjectForObject];
 }
--(nonnull NSMutableArray*)filterWithIndex:(BOOL (^_Nonnull)(id _Nonnull object, NSUInteger index))newObjectForObject
-{
-    return [[self mutableCopy] filterWithIndex:newObjectForObject];
-}
+
 -(nonnull instancetype)forEach:(void (^_Nonnull)(id _Nonnull object))newObjectForObject
 {
     for (id object in self) {

@@ -26,9 +26,7 @@
  * @discussion  Returns every available information about the main video card.
  * @return      A VMMVideoCard with information related with the main video card.
  */
-+(VMMVideoCard* _Nullable)bestVideoCard;
 +(VMMVideoCard* _Nullable)bestInternalVideoCard;
-+(VMMVideoCard* _Nullable)bestExternalVideoCard;
 
 @end
 

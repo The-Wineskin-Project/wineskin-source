@@ -16,7 +16,6 @@
 
 #import "VMMComputerInformation.h"
 #import "VMMLocalizationUtility.h"
-#import "VMMUUID.h"
 
 @implementation NSString (VMMString)
 
@@ -186,74 +185,6 @@
         return patternMatches;
     }
 }
--(BOOL)matchesWithSearchTerms:(nonnull NSArray*)searchTerms
-{
-    @autoreleasepool
-    {
-        NSCharacterSet* unitingSetItem    = [NSCharacterSet characterSetWithCharactersInString:@"'."];
-        NSCharacterSet* separatingSetItem = [NSCharacterSet characterSetWithCharactersInString:@"&"];
-        
-        NSString* string = [self.lowercaseString stringByReplacingCharactersInSet:unitingSetItem withString:@" "];
-        string = [[string componentsSeparatedByCharactersInSet:separatingSetItem] componentsJoinedByString:@" "];
-        
-        for (NSString* term in searchTerms)
-        {
-            if (![string contains:term] && ![string containsAbbreviation:term])
-            {
-                NSArray* synonymsPairs = @[@[@"&",@"and"],@[@"vs",@"versus"],
-                                           @[@"i",    @"1"],@[@"ii",   @"2"],@[@"iii",   @"3"],@[@"iv",  @"4"],@[@"v",   @"5"],
-                                           @[@"vi",   @"6"],@[@"vii",  @"7"],@[@"viii",  @"8"],@[@"ix",  @"9"],@[@"x",  @"10"],
-                                           @[@"xi",  @"11"],@[@"xii", @"12"],@[@"xiii", @"13"],@[@"xiv",@"14"],@[@"xv", @"15"],
-                                           @[@"xvi", @"16"],@[@"xvii",@"17"],@[@"xviii",@"18"],@[@"xix",@"19"]];
-                
-                BOOL hadASynonym = NO;
-                
-                for (NSArray* pair in synonymsPairs)
-                {
-                    if ([pair containsObject:term])
-                    {
-                        hadASynonym = YES;
-                        if (![string containsOneOfSynonyms:pair]) return NO;
-                    }
-                }
-                
-                if (!hadASynonym) return NO;
-            }
-        }
-    }
-    
-    return YES;
-}
--(nonnull NSArray<NSString*>*)searchTermsWithString
-{
-    NSArray* searchTerms;
-    
-    @autoreleasepool
-    {
-        NSCharacterSet* separatingSetSearch = [NSCharacterSet characterSetWithCharactersInString:@" :-*?!.,'+&()[]{}"];
-        NSArray* mustIgnoreWords = @[@""];
-        NSArray* mayIgnoreWords = @[@"a",@"of",@"the",@"in",@"to"];
-        
-        searchTerms = [self.lowercaseString componentsSeparatedByCharactersInSet:separatingSetSearch];
-        
-        NSMutableArray* clearSearchTerms = [searchTerms mutableCopy];
-        [clearSearchTerms removeObjectsInArray:mustIgnoreWords];
-        
-        NSMutableArray* filteredSearchTerms = [clearSearchTerms mutableCopy];
-        [filteredSearchTerms removeObjectsInArray:mayIgnoreWords];
-        
-        if (filteredSearchTerms.count == 0)
-        {
-            searchTerms = clearSearchTerms;
-        }
-        else
-        {
-            searchTerms = filteredSearchTerms;
-        }
-    }
-    
-    return searchTerms;
-}
 
 -(BOOL)matchesWithRegex:(nonnull NSString*)regexString
 {
@@ -277,7 +208,7 @@
         
         @autoreleasepool
         {
-            NSString* uuid = VMMUUIDCreate();
+            NSString* uuid = [[NSUUID UUID] UUIDString];;
             NSString* pyFileName  = [NSString stringWithFormat:@"pythonRegex%@.py",uuid];
             NSString* datFileName = [NSString stringWithFormat:@"pythonFile%@.dat",uuid];
             
@@ -407,24 +338,6 @@
     }
     
     return text2;
-}
--(nonnull NSString*)stringToWebStructure
-{
-    NSString* webString;
-    
-    @autoreleasepool
-    {
-        webString = [self stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
-        
-        webString = [webString stringByReplacingOccurrencesOfString:@"&" withString:@"%26"];
-        webString = [webString stringByReplacingOccurrencesOfString:@"+" withString:@"%2B"];
-        webString = [webString stringByReplacingOccurrencesOfString:@"/" withString:@"%2F"];
-        webString = [webString stringByReplacingOccurrencesOfString:@";" withString:@"%3B"];
-        webString = [webString stringByReplacingOccurrencesOfString:@"=" withString:@"%3D"];
-        webString = [webString stringByReplacingOccurrencesOfString:@"?" withString:@"%3F"];
-    }
-    
-    return webString;
 }
 
 -(NSRange)rangeAfterString:(nullable NSString*)before andBeforeString:(nullable NSString*)after

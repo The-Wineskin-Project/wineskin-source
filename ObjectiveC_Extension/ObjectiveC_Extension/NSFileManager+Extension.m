@@ -148,21 +148,6 @@
     return destination;
 }
 
--(nullable NSString*)userReadablePathForItemAtPath:(nonnull NSString*)path joinedByString:(nullable NSString*)join
-{
-    NSArray* components = [self componentsToDisplayForPath:path];
-    
-    if (join == nil) join = @" → ";
-    
-    if (([self fileExistsAtPath:path] == false) || (components == nil))
-    {
-        return [NSString stringWithFormat:@"%@%@%@",[self userReadablePathForItemAtPath:path.stringByDeletingLastPathComponent
-                                                                         joinedByString:join], join, path.lastPathComponent];
-    }
-    
-    return [components componentsJoinedByString:join];
-}
-
 -(unsigned long long int)sizeOfRegularFileAtPath:(nonnull NSString*)path
 {
     unsigned long long int result = 0;
@@ -240,11 +225,6 @@
     }
     
     return result;
-}
-
--(nullable NSString*)base64OfFileAtPath:(nonnull NSString*)path
-{
-    return [[NSData dataWithContentsOfFile:path] base64EncodedString];
 }
 
 @end

@@ -44,14 +44,10 @@ typedef enum NSChecksumType
 -(nullable NSArray<NSString*>*)subpathsAtPath:(nonnull NSString *)path ofFilesNamed:(nonnull NSString*)fileName;
 -(nullable NSString*)destinationOfSymbolicLinkAtPath:(nonnull NSString *)path;
 
--(nullable NSString*)userReadablePathForItemAtPath:(nonnull NSString*)path joinedByString:(nullable NSString*)join;
-
 -(unsigned long long int)sizeOfRegularFileAtPath:(nonnull NSString*)path;
 -(unsigned long long int)sizeOfDirectoryAtPath:(nonnull NSString*)path;
 
 -(nullable NSString*)checksum:(NSChecksumType)checksum ofFileAtPath:(nonnull NSString*)file;
-
--(nullable NSString*)base64OfFileAtPath:(nonnull NSString*)path;
 
 @end
 

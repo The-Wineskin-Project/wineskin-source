@@ -14,12 +14,6 @@
 @interface NSData (VMMData)
 
 +(void)dataWithContentsOfURL:(nonnull NSURL *)url timeoutInterval:(long long int)timeoutInterval withCompletionHandler:(void (^_Nullable)(NSUInteger statusCode, NSData* _Nullable data, NSError* _Nullable error))completion;
-+(nullable NSData*)safeDataWithContentsOfFile:(nonnull NSString*)filePath;
-
-+(nullable NSString*)jsonStringWithObject:(nonnull id)object;
-+(nullable NSData*)jsonDataWithObject:(nonnull id)object;
--(nullable id)objectWithJsonData;
-
 -(nonnull NSString*)base64EncodedString;
 
 @end

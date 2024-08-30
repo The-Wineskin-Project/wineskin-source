@@ -11,18 +11,12 @@
 
 #import <Foundation/Foundation.h>
 
-#define threadSafeUiValue(__value)   [NSThread returnThreadSafeBlock:^id{ return (__value); }]
-
 dispatch_queue_t queueWithNameAndPriority(const char* name, long priority, BOOL concurrent);
 
 @interface NSThread (VMMThread)
 
 +(void)dispatchQueueWithName:(const char*)name priority:(long)priority concurrent:(BOOL)concurrent withBlock:(void (^)(void))thread;
 +(void)dispatchBlockInMainQueue:(void (^)(void))thread;
-
-+(void)runThreadSafeBlock:(void (^)(void))block;
-
-+(id)returnThreadSafeBlock:(id (^)(void))block;
 
 @end
 

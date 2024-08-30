@@ -313,17 +313,6 @@
 {
     return [[[self videoCards] mutableCopy] filter:^BOOL(VMMVideoCard * _Nonnull object) { return object.kextLoaded; }];
 }
-
-
-+(VMMVideoCard* _Nullable)bestVideoCard
-{
-    NSMutableArray* videoCards = [[self videoCardsWithKext] mutableCopy];
-    if (videoCards.count == 0) videoCards = [[self videoCards] mutableCopy];
-    if (videoCards.count == 0) return nil;
-    
-    [videoCards sortUsingDescriptors:@[[[NSSortDescriptor alloc] initWithKey:@"isComplete" ascending:NO]]];
-    return videoCards.firstObject;
-}
 +(VMMVideoCard* _Nullable)bestInternalVideoCard
 {
     NSMutableArray* videoCards = [[self videoCardsWithKext] mutableCopy];
@@ -332,16 +321,6 @@
     
     [videoCards sortUsingDescriptors:@[[[NSSortDescriptor alloc] initWithKey:@"isComplete" ascending:NO]]];
     videoCards = [videoCards filter:^BOOL(VMMVideoCard * _Nonnull object) { return !object.isExternalGpu; }];
-    
-    if (videoCards.count == 0) return nil;
-    return videoCards.firstObject;
-}
-+(VMMVideoCard* _Nullable)bestExternalVideoCard
-{
-    NSMutableArray* videoCards = [[self videoCardsWithKext] mutableCopy];
-    if (videoCards == nil || videoCards.count == 0) return nil;
-    
-    videoCards = [videoCards filter:^BOOL(VMMVideoCard * _Nonnull object) { return object.isComplete && object.isExternalGpu; }];
     
     if (videoCards.count == 0) return nil;
     return videoCards.firstObject;

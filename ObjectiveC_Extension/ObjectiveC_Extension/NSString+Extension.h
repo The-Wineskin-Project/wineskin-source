@@ -22,8 +22,6 @@
 -(NSRange)rangeOfUnescapedChar:(char)character range:(NSRange)rangeOfReceiverToSearch;
 
 -(BOOL)contains:(nonnull NSString*)string;
--(BOOL)matchesWithSearchTerms:(nonnull NSArray*)searchTerms;
--(nonnull NSArray<NSString*>*)searchTermsWithString;
 
 -(BOOL)matchesWithRegex:(nonnull NSString*)regexString;
 -(nonnull NSArray<NSString*>*)componentsMatchingWithRegex:(nonnull NSString*)regexString;
@@ -34,7 +32,6 @@
 +(nullable NSString*)stringWithHexadecimalUTF8String:(nonnull NSString*)string;
 
 +(nonnull NSString*)stringByRemovingEvenCharsFromString:(nonnull NSString*)text;
--(nonnull NSString*)stringToWebStructure;
 
 -(NSRange)rangeAfterString:(nullable NSString*)before andBeforeString:(nullable NSString*)after;
 -(nullable NSString*)getFragmentAfter:(nullable NSString*)before andBefore:(nullable NSString*)after;

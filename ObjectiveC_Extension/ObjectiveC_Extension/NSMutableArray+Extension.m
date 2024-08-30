@@ -19,15 +19,6 @@
     }
     return self;
 }
--(nonnull NSMutableArray*)mapWithIndex:(_Nullable id (^_Nonnull)(id _Nonnull object, NSUInteger index))newObjectForObject
-{
-    for (NSUInteger index = 0; index < self.count; index++)
-    {
-        id newObject = newObjectForObject([self objectAtIndex:index], index);
-        [self replaceObjectAtIndex:index withObject:newObject ? newObject : [NSNull null]];
-    }
-    return self;
-}
 -(nonnull NSMutableArray*)filter:(BOOL (^_Nonnull)(id _Nonnull object))newObjectForObject
 {
     NSUInteger size = self.count;
@@ -41,47 +32,6 @@
         }
     }
     return self;
-}
--(nonnull NSMutableArray*)filterWithIndex:(BOOL (^_Nonnull)(id _Nonnull object, NSUInteger index))newObjectForObject
-{
-    NSUInteger size = self.count;
-    for (NSUInteger index = 0; index < size; index++)
-    {
-        BOOL preserve = newObjectForObject([self objectAtIndex:index], index);
-        if (!preserve) {
-            [self removeObjectAtIndex:index];
-            index--;
-            size--;
-        }
-    }
-    return self;
-}
-
--(void)sortAlphabeticallyByKey:(nonnull NSString*)key ascending:(BOOL)ascending
-{
-    NSSortDescriptor *sort = [NSSortDescriptor sortDescriptorWithKey:key ascending:ascending selector:@selector(caseInsensitiveCompare:)];
-    [self sortUsingDescriptors:@[sort]];
-}
--(void)sortAlphabeticallyAscending:(BOOL)ascending
-{
-    NSSortDescriptor *sort = [NSSortDescriptor sortDescriptorWithKey:nil ascending:ascending selector:@selector(caseInsensitiveCompare:)];
-    [self sortUsingDescriptors:@[sort]];
-}
--(void)sortDictionariesWithKey:(nonnull NSString *)key orderingByValuesOrder:(nonnull NSArray*)value
-{
-    [self sortUsingComparator:^NSComparisonResult(NSDictionary* obj1, NSDictionary* obj2)
-    {
-        NSUInteger obj1ValueIndex = obj1[key] != nil ? [value indexOfObject:obj1[key]] : -1;
-        NSUInteger obj2ValueIndex = obj2[key] != nil ? [value indexOfObject:obj2[key]] : -1;
-         
-        if (obj1ValueIndex == -1 && obj2ValueIndex != -1) return NSOrderedDescending;
-        if (obj1ValueIndex != -1 && obj2ValueIndex == -1) return NSOrderedAscending;
-        if (obj1ValueIndex == -1 && obj2ValueIndex == -1) return NSOrderedSame;
-         
-        if (obj1ValueIndex > obj2ValueIndex) return NSOrderedDescending;
-        if (obj1ValueIndex < obj2ValueIndex) return NSOrderedAscending;
-        return NSOrderedSame;
-    }];
 }
 
 -(void)sortBySelector:(SEL _Nonnull)selector inOrder:(NSArray* _Nonnull)order

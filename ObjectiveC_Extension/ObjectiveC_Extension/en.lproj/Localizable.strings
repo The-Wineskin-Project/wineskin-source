@@ -200,12 +200,5 @@
 "File %@ not found." = "Arquivo %@ não encontrado.";
 "File %@ not runnable." = "Arquivo %@ não é executável.";
 "Directory %@ does not exists." = "Diretório %@ não existe.";
-
-// VMMWebView
-"You need Flash Player in order to watch YouTube videos in your macOS version" = "Você precisa do Flash Player para assistir vídeos do YouTube na sua versão do macOS";
-"Invalid URL provided" = "URL inválida provida";
- 
-// VMMKeyCaptureField
-"Unknown Key (%d)" = "Tecla Desconhecida (%d)";
  
 */

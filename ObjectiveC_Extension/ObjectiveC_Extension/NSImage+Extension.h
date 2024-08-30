@@ -13,8 +13,6 @@
 
 @interface NSBitmapImageRep (VMMBitmapImageRep)
 
--(BOOL)isTransparentAtX:(int)x andY:(int)y;
-
 @end
 
 
@@ -22,12 +20,7 @@
 
 +(NSImage*)imageWithData:(NSData*)data;
 
-+(NSImage*)quickLookImageWithMaximumSize:(int)size forFileAtPath:(NSString*)arquivo;
-+(NSImage*)imageFromFileAtPath:(NSString*)arquivo;
-
 +(NSImage*)transparentImageWithSize:(NSSize)size;
-
--(BOOL)isTransparent;
 
 -(BOOL)saveAsIcnsAtPath:(NSString*)icnsPath;
 

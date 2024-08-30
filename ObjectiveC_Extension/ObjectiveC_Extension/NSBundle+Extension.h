@@ -15,12 +15,4 @@
 -(nonnull NSString*)bundleName;
 -(nullable NSImage*)bundleIcon;
 
--(BOOL)isAppTranslocationActive;
--(BOOL)disableAppTranslocation;
-
-+(nullable NSBundle*)originalMainBundle;
-
--(BOOL)preferExternalGPU;
--(void)setPreferExternalGPU:(BOOL)prefer;
-
 @end

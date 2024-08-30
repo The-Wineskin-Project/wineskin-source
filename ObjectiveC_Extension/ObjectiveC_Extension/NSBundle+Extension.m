@@ -9,10 +9,8 @@
 #import "NSBundle+Extension.h"
 
 #import "NSTask+Extension.h"
-#import "NSException+Extension.h"
 #import "NSFileManager+Extension.h"
 #import "NSString+Extension.h"
-#import "NSUserDefaults+Extension.h"
 
 #import "VMMComputerInformation.h"
 
@@ -22,8 +20,6 @@
 static NSString* const BUNDLE_NAME_PLACEHOLDER = @"App";
 
 @implementation NSBundle (VMMBundle)
-
-NSBundle* _originalMainBundle;
 
 -(nonnull NSUserDefaults*)userDefaults
 {
@@ -211,62 +207,6 @@ NSBundle* _originalMainBundle;
         
         return bundlePathBeforeAppTranslocation;
     }
-}
-
--(BOOL)isAppTranslocationActive
-{
-    // App Translocation description:
-    // http://lapcatsoftware.com/articles/app-translocation.html
-    
-    if (!IS_SYSTEM_MAC_OS_10_12_OR_SUPERIOR) return false;
-    
-    NSString* path = [self bundlePath];
-    return [path hasPrefix:@"/private/var/folders/"] || [path hasPrefix:@"/var/folders/"];
-}
--(BOOL)disableAppTranslocation
-{
-    NSString* originalPath = [self bundlePath];
-    if (originalPath == nil) return false;
-    
-    [NSTask runProgram:@"xattr" withFlags:@[@"-r",@"-d",@"com.apple.quarantine",originalPath]];
-    return true;
-}
-
-+(nullable NSBundle*)originalMainBundle
-{
-    @synchronized ([NSBundle class])
-    {
-        if ([[NSBundle mainBundle] isAppTranslocationActive])
-        {
-            if (_originalMainBundle != nil && [[NSFileManager defaultManager] fileExistsAtPath:_originalMainBundle.bundlePath])
-            {
-                return _originalMainBundle;
-            }
-            
-            NSString* originalPath = [[NSBundle mainBundle] bundlePathBeforeAppTranslocation];
-            if (originalPath == nil)
-            {
-                return nil;
-            }
-            
-            _originalMainBundle = [NSBundle bundleWithPath:originalPath];
-            return _originalMainBundle;
-        }
-        
-        return [NSBundle mainBundle];
-    }
-}
-
--(BOOL)preferExternalGPU
-{
-    NSUserDefaults* defaults = [self userDefaults];
-    return [defaults preferExternalGPU];
-}
--(void)setPreferExternalGPU:(BOOL)prefer
-{
-    NSUserDefaults* defaults = [self userDefaults];
-    [defaults setPreferExternalGPU:prefer];
-    [defaults synchronize];
 }
 
 @end

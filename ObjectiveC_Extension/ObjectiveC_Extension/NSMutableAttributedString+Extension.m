@@ -39,51 +39,6 @@
 {
     [self addAttribute:name value:value range:NSMakeRange(0, self.length)];
 }
--(void)setRegularFont:(NSString*)regFont boldFont:(NSString*)boldFont italicFont:(NSString*)italicFont boldAndItalicFont:(NSString*)biFont size:(CGFloat)fontSize
-{
-    @autoreleasepool
-    {
-        NSMutableDictionary* fontBoldDictionary = [[NSMutableDictionary alloc] init];
-        NSMutableDictionary* fontItalicDictionary = [[NSMutableDictionary alloc] init];
-        
-        for (int i=0; i< self.length; i++)
-        {
-            NSString *fontName = [[self attribute:NSFontAttributeName atIndex:i effectiveRange:nil] fontName];
-            
-            NSNumber* hasItalic = fontItalicDictionary[fontName];
-            if (hasItalic == nil)
-            {
-                fontItalicDictionary[fontName] = @([[[NSFontManager alloc] init] fontNamed:fontName hasTraits:NSItalicFontMask]);
-                hasItalic = fontItalicDictionary[fontName];
-            }
-            
-            NSNumber* hasBold = fontBoldDictionary[fontName];
-            if (hasBold == nil)
-            {
-                fontBoldDictionary[fontName] = @([[[NSFontManager alloc] init] fontNamed:fontName hasTraits:NSBoldFontMask]);
-                hasBold = fontBoldDictionary[fontName];
-            }
-            
-            fontName = regFont;
-            if (boldFont   && hasBold.boolValue)                        fontName = boldFont;
-            if (italicFont && hasItalic.boolValue)                      fontName = italicFont;
-            if (biFont     && hasBold.boolValue && hasItalic.boolValue) fontName = biFont;
-            
-            [self setFont:[NSFont fontWithName:fontName size:fontSize] range:NSMakeRange(i,1)];
-        }
-    }
-}
-
--(void)setTextJustified
-{
-    [self setTextAlignment:IS_SYSTEM_MAC_OS_10_11_OR_SUPERIOR ? NSTextAlignmentJustified : NSJustifiedTextAlignment];
-}
--(void)setTextAlignment:(NSTextAlignment)textAlignment
-{
-    NSMutableParagraphStyle *paragrapStyle = [[NSMutableParagraphStyle alloc] init];
-    paragrapStyle.alignment = textAlignment;
-    [self addAttribute:NSParagraphStyleAttributeName value:paragrapStyle];
-}
 
 -(void)setFontColor:(NSColor*)color range:(NSRange)range
 {

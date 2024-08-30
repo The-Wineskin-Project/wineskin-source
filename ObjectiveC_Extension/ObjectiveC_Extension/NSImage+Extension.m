@@ -8,12 +8,10 @@
 
 #import <CoreImage/CoreImage.h>
 
-#import "NSException+Extension.h"
 #import "NSFileManager+Extension.h"
 #import "NSImage+Extension.h"
 #import "NSString+Extension.h"
 #import "NSTask+Extension.h"
-#import "NSScreen+Extension.h"
 
 #import "VMMComputerInformation.h"
 #import "VMMLogUtility.h"
@@ -24,11 +22,6 @@
 #define TIFF2ICNS_ICON_SIZE 512
 
 @implementation NSBitmapImageRep (VMMBitmapImageRep)
--(BOOL)isTransparentAtX:(int)x andY:(int)y
-{
-    CGFloat alpha = [[self colorAtX:x y:y] alphaComponent];
-    return (alpha < 1.0/255);
-}
 @end
 
 @implementation NSImage (VMMImage)
@@ -49,54 +42,6 @@
     return image;
 }
 
-+(NSImage*)quickLookImageWithMaximumSize:(int)size forFileAtPath:(NSString*)arquivo
-{
-    NSImage* img;
-    
-    @autoreleasepool
-    {
-        img = [[NSWorkspace sharedWorkspace] iconForFile:arquivo];
-        
-        [NSTask runCommand:@[@"qlmanage", @"-t", @"-s",[NSString stringWithFormat:@"%d",size], @"-o.", arquivo]
-                 atRunPath:[arquivo stringByDeletingLastPathComponent]];
-        
-        NSString* newFile = [NSString stringWithFormat:@"%@.png",arquivo];
-        if ([[NSFileManager defaultManager] regularFileExistsAtPath:newFile])
-        {
-            img = [[NSImage alloc] initWithContentsOfFile:newFile];
-            [[NSFileManager defaultManager] removeItemAtPath:newFile];
-        }
-    }
-    
-    return img;
-}
-+(NSImage*)imageFromFileAtPath:(NSString*)arquivo
-{
-    NSImage *img;
-    
-    @autoreleasepool
-    {
-        if ([[NSImage imageFileTypes] containsObject:arquivo.pathExtension.lowercaseString])
-        {
-            img = [[NSImage alloc] initWithContentsOfFile:arquivo];
-        }
-        
-        if (img == nil)
-        {
-            // 100000 is an arbitrary number, choosen for been a size bigger enought to
-            // take the maximum quality of every possible image or icon.
-            img = [self quickLookImageWithMaximumSize:100000 forFileAtPath:arquivo];
-        }
-        
-        if (img == nil)
-        {
-            img = [[NSWorkspace sharedWorkspace] iconForFile:arquivo];
-        }
-    }
-    
-    return img;
-}
-
 +(NSImage*)transparentImageWithSize:(NSSize)size
 {
     NSImage* clearImage = [[NSImage alloc] initWithSize:size];
@@ -106,29 +51,6 @@
     [clearImage unlockFocus];
     
     return clearImage;
-}
-
--(BOOL)isTransparent
-{
-    @autoreleasepool
-    {
-        NSData *tempData = [[NSData alloc] initWithData:[self TIFFRepresentation]];
-        NSBitmapImageRep *repIcon = [[NSBitmapImageRep alloc] initWithData:tempData];
-        int x, y;
-        
-        for (y=0; y<self.size.height; y++)
-        {
-            for (x=0; x<self.size.width; x++)
-            {
-                if ([repIcon isTransparentAtX:x andY:y] == false)
-                {
-                    return false;
-                }
-            }
-        }
-    }
-    
-    return true;
 }
 
 -(BOOL)saveAsPngImageWithSize:(int)size atPath:(NSString*)pngPath
@@ -204,7 +126,7 @@
     {
         NSString *tiffPath = [NSString stringWithFormat:@"%@.tiff",icnsPath];
         
-        CGFloat correctIconSize = TIFF2ICNS_ICON_SIZE/[[NSScreen mainScreen] retinaScale];
+        CGFloat correctIconSize = TIFF2ICNS_ICON_SIZE/[[NSScreen mainScreen] backingScaleFactor];
         NSImage *resizedImage = [[NSImage alloc] initWithSize:NSMakeSize(correctIconSize,correctIconSize)];
         [resizedImage lockFocus];
         [self drawInRect:NSMakeRect(0,0,correctIconSize, correctIconSize) fromRect:self.alignmentRect
@@ -241,8 +163,9 @@
         
         if ([typeForExtension.allKeys containsObject:extension] == false)
         {
-            @throw exception(NSInvalidArgumentException,
-                             [NSString stringWithFormat:@"Invalid extension for saving image file: %@",extension]);
+            @throw [NSException exceptionWithName:NSInvalidArgumentException
+                                           reason:[NSString stringWithFormat:@"Invalid extension for saving image file: %@",extension]
+                                         userInfo:nil];
             return false;
         }
         

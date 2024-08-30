@@ -13,8 +13,6 @@
 
 @interface NSTask (VMMTask)
 
-+(NSArray*)componentsFromFlagsString:(NSString*)initialFlags;
-
 +(NSString*)runCommand:(NSArray<NSString*>*)programAndFlags;
 +(NSString*)runCommand:(NSArray<NSString*>*)programAndFlags atRunPath:(NSString*)path;
 +(NSString*)runCommand:(NSArray<NSString*>*)programAndFlags atRunPath:(NSString*)path andWait:(BOOL)shouldWait;
@@ -28,9 +26,6 @@
 +(NSString*)runProgram:(NSString*)program withFlags:(NSArray<NSString*>*)flags withEnvironment:(NSDictionary*)env;
 +(NSString*)runProgram:(NSString*)program withFlags:(NSArray<NSString*>*)flags atRunPath:(NSString*)path withEnvironment:(NSDictionary*)env;
 +(NSString*)runProgram:(NSString*)program withFlags:(NSArray<NSString*>*)flags waitingForTimeInterval:(unsigned int)timeout;
-
-+(void)runAsynchronousProgram:(NSString*)program withFlags:(NSArray<NSString*>*)flags withEnvironment:(NSDictionary*)env;
-+(void)runAsynchronousProgram:(NSString*)program withFlags:(NSArray<NSString*>*)flags atRunPath:(NSString*)path withEnvironment:(NSDictionary*)env;
 
 +(NSString*)runProgram:(NSString*)program withFlags:(NSArray<NSString*>*)flags atRunPath:(NSString*)path withEnvironment:(NSDictionary*)env andWaiting:(BOOL)wait forTimeInterval:(unsigned int)timeout outputEncoding:(NSStringEncoding)encoding;
 

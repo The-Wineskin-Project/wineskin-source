@@ -41,29 +41,4 @@
     
     return propertyList;
 }
-
-+(nullable id)propertyListWithArchivedString:(nonnull NSString *)string
-{
-    id result;
-    
-    @autoreleasepool
-    {
-        NSData* data = [string dataUsingEncoding:NSUTF8StringEncoding];
-        result = [self propertyListWithArchivedData:data];
-    }
-    
-    return result;
-}
-+(nullable id)propertyListWithArchivedData:(nonnull NSData *)data
-{
-    @try
-    {
-        return [NSKeyedUnarchiver unarchiveObjectWithData:data];
-    }
-    @catch (NSException* exception)
-    {
-        return nil;
-    }
-}
-
 @end
