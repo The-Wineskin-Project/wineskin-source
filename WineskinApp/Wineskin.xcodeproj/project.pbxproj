@@ -186,17 +186,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		080E96DDFE201D6D7F000001 /* Classes */ = {
-			isa = PBXGroup;
-			children = (
-				553617DA1F02DB4B00C62E0C /* Controller */,
-				4EA283E31F00013A00E61883 /* Model */,
-				4EA283CD1EFFFC4400E61883 /* Functions */,
-				4EA283D01EFFFCEA00E61883 /* Views */,
-			);
-			name = Classes;
-			sourceTree = "<group>";
-		};
 		1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -226,23 +215,13 @@
 		29B97314FDCFA39411CA2CEA /* Wineskin */ = {
 			isa = PBXGroup;
 			children = (
-				080E96DDFE201D6D7F000001 /* Classes */,
-				29B97315FDCFA39411CA2CEA /* Other Sources */,
+				C0F090402C84E4C5009696AE /* Classes */,
+				C0FA158C2C9B3C3900E9B251 /* OtherSources */,
 				29B97317FDCFA39411CA2CEA /* Resources */,
 				29B97323FDCFA39411CA2CEA /* Frameworks */,
 				19C28FACFE9D520D11CA2CBB /* Products */,
-				A14ED5F826D5D2D80022EC36 /* Recovered References */,
 			);
 			name = Wineskin;
-			sourceTree = "<group>";
-		};
-		29B97315FDCFA39411CA2CEA /* Other Sources */ = {
-			isa = PBXGroup;
-			children = (
-				256AC3F00F4B6AF500CF3369 /* Wineskin_Prefix.pch */,
-				29B97316FDCFA39411CA2CEA /* main.m */,
-			);
-			name = "Other Sources";
 			sourceTree = "<group>";
 		};
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
@@ -301,16 +280,37 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		4EA283CD1EFFFC4400E61883 /* Functions */ = {
+		C0F090402C84E4C5009696AE /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				4EA283CE1EFFFC5700E61883 /* Extensions */,
-				4EA283CF1EFFFC8B00E61883 /* Utilities */,
+				C0F090412C84E4CA009696AE /* Controller */,
+				C0F090432C84E4CF009696AE /* Extensions */,
+				C0F090422C84E4CC009696AE /* Model */,
+				C0F090442C84E4F1009696AE /* Utilities */,
+				C0F090452C84E505009696AE /* Views */,
 			);
-			name = Functions;
+			path = Classes;
 			sourceTree = "<group>";
 		};
-		4EA283CE1EFFFC5700E61883 /* Extensions */ = {
+		C0F090412C84E4CA009696AE /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				256AC3D80F4B6AC300CF3369 /* WineskinAppDelegate.h */,
+				256AC3D90F4B6AC300CF3369 /* WineskinAppDelegate.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		C0F090422C84E4CC009696AE /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				4EA283EA1F0001E700E61883 /* NSPortManager.h */,
+				4EA283EB1F0001E700E61883 /* NSPortManager.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		C0F090432C84E4CF009696AE /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
 				4EA283A91EFFFA7100E61883 /* NSAlert+Extension.h */,
@@ -336,10 +336,10 @@
 				4EA283BE1EFFFAB400E61883 /* NSThread+Extension.h */,
 				4EA283BF1EFFFAB400E61883 /* NSThread+Extension.m */,
 			);
-			name = Extensions;
+			path = Extensions;
 			sourceTree = "<group>";
 		};
-		4EA283CF1EFFFC8B00E61883 /* Utilities */ = {
+		C0F090442C84E4F1009696AE /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
 				4EA283D71EFFFFED00E61883 /* Download.h */,
@@ -363,10 +363,10 @@
 				4EA283D31EFFFFD000E61883 /* NSWineskinPortDataWriter.h */,
 				4EA283D41EFFFFD000E61883 /* NSWineskinPortDataWriter.m */,
 			);
-			name = Utilities;
+			path = Utilities;
 			sourceTree = "<group>";
 		};
-		4EA283D01EFFFCEA00E61883 /* Views */ = {
+		C0F090452C84E505009696AE /* Views */ = {
 			isa = PBXGroup;
 			children = (
 				4EA283DA1F0000A500E61883 /* NSProgressView.h */,
@@ -374,32 +374,16 @@
 				4EA283A61EFFFA4100E61883 /* NSDropIconView.h */,
 				4EA283A71EFFFA4100E61883 /* NSDropIconView.m */,
 			);
-			name = Views;
+			path = Views;
 			sourceTree = "<group>";
 		};
-		4EA283E31F00013A00E61883 /* Model */ = {
+		C0FA158C2C9B3C3900E9B251 /* OtherSources */ = {
 			isa = PBXGroup;
 			children = (
-				4EA283EA1F0001E700E61883 /* NSPortManager.h */,
-				4EA283EB1F0001E700E61883 /* NSPortManager.m */,
+				256AC3F00F4B6AF500CF3369 /* Wineskin_Prefix.pch */,
+				29B97316FDCFA39411CA2CEA /* main.m */,
 			);
-			name = Model;
-			sourceTree = "<group>";
-		};
-		553617DA1F02DB4B00C62E0C /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-				256AC3D80F4B6AC300CF3369 /* WineskinAppDelegate.h */,
-				256AC3D90F4B6AC300CF3369 /* WineskinAppDelegate.m */,
-			);
-			name = Controller;
-			sourceTree = "<group>";
-		};
-		A14ED5F826D5D2D80022EC36 /* Recovered References */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = "Recovered References";
+			path = OtherSources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -576,7 +560,7 @@
 				GCC_MODEL_TUNING = G5;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = Wineskin_Prefix.pch;
+				GCC_PREFIX_HEADER = OtherSources/Wineskin_Prefix.pch;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				GCC_WARN_ABOUT_MISSING_NEWLINE = YES;
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
@@ -614,7 +598,7 @@
 				ENABLE_HARDENED_RUNTIME = NO;
 				GCC_MODEL_TUNING = G5;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = Wineskin_Prefix.pch;
+				GCC_PREFIX_HEADER = OtherSources/Wineskin_Prefix.pch;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				GCC_WARN_ABOUT_MISSING_NEWLINE = YES;
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
