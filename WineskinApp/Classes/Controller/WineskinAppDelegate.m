@@ -251,7 +251,7 @@ NSFileManager *fm;
 
 - (IBAction)aboutWindow:(id)sender
 {
-	[aboutWindowVersionNumber setStringValue:WINESKIN_VERSION];
+    [aboutWindowVersionNumber setStringValue:[portManager plistObjectForKey:WINESKIN_WRAPPER_PLIST_KEY_WINESKIN_VERSION]];
 	[aboutWindow makeKeyAndOrderFront:self];
 }
 
@@ -621,7 +621,7 @@ NSFileManager *fm;
 - (void)loadAllData
 {
 	//get wrapper version and put on Advanced Page wrapperVersionText
-	[wrapperVersionText setStringValue:[NSString stringWithFormat:@"%@",WINESKIN_VERSION]];
+    [wrapperVersionText setStringValue:[portManager plistObjectForKey:WINESKIN_WRAPPER_PLIST_KEY_WINESKIN_VERSION]];
 
 	//get current engine and put it on Advanced Page engineVersionText
     [engineVersionText setStringValue:[NSPortDataLoader engineOfPortAtPath:self.wrapperPath]];
