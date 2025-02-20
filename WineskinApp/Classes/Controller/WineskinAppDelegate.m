@@ -1906,8 +1906,8 @@ NSFileManager *fm;
     NSString* ScriptsPath = [NSString stringWithFormat:@"%@/Contents/Resources/Scripts",self.wrapperPath];
     if (![fm fileExistsAtPath:ScriptsPath]) [self replaceFile:@"/Contents/Resources/Scripts" withVersionFromMasterWrapper:masterWrapperName];
 
-    //edit Info.plist to new wrapper version, replace - with spaces, and dump .app
-    [portManager setPlistObject:[[masterWrapperName stringByReplacingOccurrencesOfString:@".app" withString:@""] stringByReplacingOccurrencesOfString:@"-" withString:@" "] forKey:WINESKIN_WRAPPER_PLIST_KEY_WINESKIN_VERSION];
+    //edit Info.plist to new wrapper version, dump Winekin- , and dump .app
+    [portManager setPlistObject:[[masterWrapperName stringByReplacingOccurrencesOfString:@".app" withString:@""] stringByReplacingOccurrencesOfString:@"Wineskin-" withString:@""] forKey:WINESKIN_WRAPPER_PLIST_KEY_WINESKIN_VERSION];
 
     //Make sure new keys are added to the old Info.plist
     NSMutableDictionary *newPlistDictionary = [NSMutableDictionary mutableDictionaryWithContentsOfFile:[NSString stringWithFormat:@"%@/%@/Contents/Info.plist",WINESKIN_LIBRARY_WRAPPER_FOLDER,masterWrapperName]];
