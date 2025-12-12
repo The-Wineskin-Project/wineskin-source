@@ -120,17 +120,6 @@ NSFileManager *fm;
         [iconImageView setEditable:state];
         [iconBrowseButton setEnabled:state];
 
-        if (IS_SYSTEM_MAC_OS_SONOMA_OR_SUPERIOR && IsProcessTranslated) {
-            if ([fm fileExistsAtPath:[NSString stringWithFormat:@"%@/d3dmetal_force",self.wswineBundlePath]]) {
-                [gptkCheckBoxButton setEnabled:NO];
-                [gptkCheckBoxButton setState:YES];
-            } else {
-                [gptkCheckBoxButton setEnabled:state];
-            }
-        } else {
-            [gptkCheckBoxButton setEnabled:NO];
-        }
-
         // ****Tools****
         //winecfg
         //regedit
@@ -184,20 +173,8 @@ NSFileManager *fm;
         [geckoCheckBoxButton setEnabled:state];
         [monoCheckBoxButton setEnabled:state];
         [metalhudCheckBoxButton setEnabled:state];
-
-        if ([fm fileExistsAtPath:[NSString stringWithFormat:@"%@/d3dmetal_force",self.wswineBundlePath]]) {
-            [cxmoltenvkCheckBoxButton       setEnabled:NO];
-            [cxmoltenvkCheckBoxButton       setState:NO];
-            [fastmathCheckBoxButton         setEnabled:NO];
-        } else {
-            if ([[self->portManager plistObjectForKey:WINESKIN_WRAPPER_PLIST_KEY_D3DMETAL] intValue] == 1) {
-                [cxmoltenvkCheckBoxButton setEnabled:NO];
-            } else {
-                [cxmoltenvkCheckBoxButton setEnabled:state];
-                [fastmathCheckBoxButton setEnabled:state];
-            }
-            [fastmathCheckBoxButton setEnabled:state];
-        }
+        [cxmoltenvkCheckBoxButton setEnabled:state];
+        [fastmathCheckBoxButton setEnabled:state];
 
         if (state) {
             [toolRunningPI stopAnimation:self];
@@ -643,20 +620,6 @@ NSFileManager *fm;
 		[extPopUpButton addItemWithTitle:item];
     }
 
-    if (IS_SYSTEM_MAC_OS_SONOMA_OR_SUPERIOR && IsProcessTranslated) {
-        if ([fm fileExistsAtPath:[NSString stringWithFormat:@"%@/d3dmetal_force",self.wswineBundlePath]]) {
-            [gptkCheckBoxButton setEnabled:NO];
-            [gptkCheckBoxButton setState:YES];
-            [portManager setPlistObject:@([gptkCheckBoxButton state]) forKey:WINESKIN_WRAPPER_PLIST_KEY_D3DMETAL];
-            [portManager setPlistObject:@([gptkCheckBoxButton state]) forKey:WINESKIN_WRAPPER_PLIST_KEY_D3DMETAL_FORCE];
-            [portManager setPlistObject:@([gptkCheckBoxButton state]) forKey:WINESKIN_WRAPPER_PLIST_KEY_MOLTENVK_CX];
-        } else {
-            [gptkCheckBoxButton      setState:[[portManager plistObjectForKey:WINESKIN_WRAPPER_PLIST_KEY_D3DMETAL] intValue]];
-        }
-    } else {
-        [gptkCheckBoxButton        setEnabled:NO];
-    }
-
     BOOL validExtension = ![[[extPopUpButton selectedItem] title] isEqualToString:@""];
     [extMinusButton setEnabled:validExtension];
     [extEditButton  setEnabled:validExtension];
@@ -669,21 +632,8 @@ NSFileManager *fm;
     [monoCheckBoxButton      setState:[[portManager plistObjectForKey:WINESKIN_WRAPPER_PLIST_KEY_DISABLE_MONO] intValue]];
     [metalhudCheckBoxButton      setState:[[portManager plistObjectForKey:WINESKIN_WRAPPER_PLIST_KEY_METAL_HUD] intValue]];
 
-    if ([fm fileExistsAtPath:[NSString stringWithFormat:@"%@/d3dmetal_force",self.wswineBundlePath]]) {
-        [cxmoltenvkCheckBoxButton       setEnabled:NO];
-        [cxmoltenvkCheckBoxButton       setState:NO];
-        [fastmathCheckBoxButton         setEnabled:NO];
-        [fastmathCheckBoxButton         setState:NO];
-    } else {
-        [cxmoltenvkCheckBoxButton      setState:[[portManager plistObjectForKey:WINESKIN_WRAPPER_PLIST_KEY_MOLTENVK_CX] intValue]];
-        if ([[self->portManager plistObjectForKey:WINESKIN_WRAPPER_PLIST_KEY_D3DMETAL] intValue] == 1) {
-            [cxmoltenvkCheckBoxButton      setEnabled:NO];
-        } else {
-            [cxmoltenvkCheckBoxButton      setEnabled:YES];
-        }
-        [fastmathCheckBoxButton      setState:[[portManager plistObjectForKey:WINESKIN_WRAPPER_PLIST_KEY_MOLTENVK_FASTMATH] intValue]];
-    }
-
+    [cxmoltenvkCheckBoxButton      setState:[[portManager plistObjectForKey:WINESKIN_WRAPPER_PLIST_KEY_MOLTENVK_CX] intValue]];
+    [fastmathCheckBoxButton      setState:[[portManager plistObjectForKey:WINESKIN_WRAPPER_PLIST_KEY_MOLTENVK_FASTMATH] intValue]];
 
     [fntoggleCheckBoxButton       setState:[[portManager plistObjectForKey:WINESKIN_WRAPPER_PLIST_KEY_ENABLE_FNTOGGLE] intValue]];
     [esyncCheckBoxButton      setState:[[portManager plistObjectForKey:WINESKIN_WRAPPER_PLIST_KEY_ESYNC] intValue]];
@@ -999,31 +949,6 @@ NSFileManager *fm;
 {
     [portManager setPlistObject:@([msyncCheckBoxButton state]) forKey:WINESKIN_WRAPPER_PLIST_KEY_MSYNC];
     [portManager synchronizePlist];
-}
-
-//TODO: Add D3DMetal checkbox/toggle
-//Need to refresh the wineprefix to install D3DMetal wine stubs
-- (IBAction)d3dmetalButtonPressed:(id)sender
-{
-    [busyWindow makeKeyAndOrderFront:self];
-    [advancedWindow orderOut:self];
-    [portManager setPlistObject:@([gptkCheckBoxButton state]) forKey:WINESKIN_WRAPPER_PLIST_KEY_D3DMETAL];
-
-    //TODO: Set WINESKIN_WRAPPER_PLIST_KEY_D3DMETAL_FORCE if not already set
-    if ([[self->portManager plistObjectForKey:WINESKIN_WRAPPER_PLIST_KEY_D3DMETAL_FORCE] intValue] != 1) {
-        [portManager setPlistObject:@([gptkCheckBoxButton state]) forKey:WINESKIN_WRAPPER_PLIST_KEY_D3DMETAL_FORCE];
-    }
-
-    //TODO: Set WINESKIN_WRAPPER_PLIST_KEY_MOLTENVK_CX if not already set
-    if ([[self->portManager plistObjectForKey:WINESKIN_WRAPPER_PLIST_KEY_MOLTENVK_CX] intValue] != 1) {
-        [portManager setPlistObject:@([gptkCheckBoxButton state]) forKey:WINESKIN_WRAPPER_PLIST_KEY_MOLTENVK_CX];
-    }
-
-    [portManager synchronizePlist];
-    [self systemCommand:[NSPathUtilities wineskinLauncherBinForPortAtPath:self.wrapperPath] withArgs:@[@"WSS-wineboot"]];
-    [advancedWindow makeKeyAndOrderFront:self];
-    [busyWindow orderOut:self];
-    [self loadAllData];
 }
 
 //****************************************************************

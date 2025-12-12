@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="23504" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="24412" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
         <deployment version="1080" identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="23504"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="24412"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -308,7 +308,7 @@
         <window title="Wineskin" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" animationBehavior="default" id="371">
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES"/>
             <rect key="contentRect" x="818" y="578" width="263" height="164"/>
-            <rect key="screenRect" x="0.0" y="0.0" width="1352" height="843"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="1352" height="820"/>
             <view key="contentView" id="372">
                 <rect key="frame" x="0.0" y="0.0" width="263" height="164"/>
                 <autoresizingMask key="autoresizingMask"/>
@@ -385,7 +385,7 @@ Gw
         <window title="Installer" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" animationBehavior="default" id="1928">
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES"/>
             <rect key="contentRect" x="641" y="482" width="603" height="320"/>
-            <rect key="screenRect" x="0.0" y="0.0" width="1352" height="843"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="1352" height="820"/>
             <view key="contentView" id="1929">
                 <rect key="frame" x="0.0" y="0.0" width="603" height="320"/>
                 <autoresizingMask key="autoresizingMask"/>
@@ -514,7 +514,7 @@ Gw
         <window title="Screen Options" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" animationBehavior="default" id="553">
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES"/>
             <rect key="contentRect" x="645" y="530" width="692" height="296"/>
-            <rect key="screenRect" x="0.0" y="0.0" width="1352" height="843"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="1352" height="820"/>
             <view key="contentView" id="554">
                 <rect key="frame" x="0.0" y="0.0" width="692" height="296"/>
                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -853,7 +853,7 @@ Gw
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                         <popUpButtonCell key="cell" type="push" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" id="644">
                                                             <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
-                                                            <font key="font" metaFont="menu"/>
+                                                            <font key="font" metaFont="message"/>
                                                             <menu key="menu" title="OtherViews" id="645">
                                                                 <items>
                                                                     <menuItem title="24 bit" id="646"/>
@@ -890,7 +890,7 @@ Gw
         <window title="Wineskin Advanced" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" animationBehavior="default" id="680">
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES"/>
             <rect key="contentRect" x="613" y="465" width="685" height="341"/>
-            <rect key="screenRect" x="0.0" y="0.0" width="1352" height="843"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="1352" height="820"/>
             <value key="minSize" type="size" width="672" height="271"/>
             <view key="contentView" id="681">
                 <rect key="frame" x="0.0" y="0.0" width="685" height="341"/>
@@ -1101,7 +1101,7 @@ Gw
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <popUpButtonCell key="cell" type="push" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" enabled="NO" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" id="1399">
                                                 <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
-                                                <font key="font" metaFont="menu"/>
+                                                <font key="font" metaFont="message"/>
                                                 <menu key="menu" title="OtherViews" id="1400"/>
                                             </popUpButtonCell>
                                         </popUpButton>
@@ -1158,17 +1158,6 @@ Gw
                                                 <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                             </textFieldCell>
                                         </textField>
-                                        <button hidden="YES" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zVI-Ry-XTv">
-                                            <rect key="frame" x="14" y="157" width="610" height="23"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                            <buttonCell key="cell" type="check" title="Direct3D to Metal translation layer - (D3DMetal/GPTK)" bezelStyle="regularSquare" imagePosition="left" alignment="left" enabled="NO" inset="2" id="cpV-Qw-4AM">
-                                                <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
-                                                <font key="font" metaFont="system"/>
-                                            </buttonCell>
-                                            <connections>
-                                                <action selector="d3dmetalButtonPressed:" target="494" id="HBG-OZ-urS"/>
-                                            </connections>
-                                        </button>
                                     </subviews>
                                 </view>
                             </tabViewItem>
@@ -1622,7 +1611,7 @@ Gw
         <window title="Add/Edit Associated Extension" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" animationBehavior="default" id="1421">
             <windowStyleMask key="styleMask" titled="YES"/>
             <rect key="contentRect" x="552" y="551" width="742" height="253"/>
-            <rect key="screenRect" x="0.0" y="0.0" width="1352" height="843"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="1352" height="820"/>
             <value key="minSize" type="size" width="742" height="253"/>
             <value key="maxSize" type="size" width="742" height="253"/>
             <view key="contentView" id="1422">
@@ -1739,7 +1728,7 @@ Gw
         <window title="Busy..." allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" animationBehavior="default" id="859">
             <windowStyleMask key="styleMask" titled="YES"/>
             <rect key="contentRect" x="814" y="689" width="213" height="114"/>
-            <rect key="screenRect" x="0.0" y="0.0" width="1352" height="843"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="1352" height="820"/>
             <value key="minSize" type="size" width="213" height="114"/>
             <value key="maxSize" type="size" width="213" height="114"/>
             <view key="contentView" id="860">
@@ -1766,7 +1755,7 @@ Gw
         <window title="Choose Executable" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" animationBehavior="default" id="866">
             <windowStyleMask key="styleMask" titled="YES"/>
             <rect key="contentRect" x="623" y="636" width="590" height="168"/>
-            <rect key="screenRect" x="0.0" y="0.0" width="1352" height="843"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="1352" height="820"/>
             <view key="contentView" id="867">
                 <rect key="frame" x="0.0" y="0.0" width="590" height="168"/>
                 <autoresizingMask key="autoresizingMask"/>
@@ -1785,7 +1774,7 @@ Gw
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <popUpButtonCell key="cell" type="push" title="Item" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" selectedItem="875" id="871">
                             <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
-                            <font key="font" metaFont="menu"/>
+                            <font key="font" metaFont="message"/>
                             <menu key="menu" title="OtherViews" id="872">
                                 <items>
                                     <menuItem title="Item" state="on" id="875"/>
@@ -1852,7 +1841,7 @@ DQ
         <window title="Choose Engine" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" animationBehavior="default" id="980">
             <windowStyleMask key="styleMask" titled="YES"/>
             <rect key="contentRect" x="762" y="533" width="326" height="271"/>
-            <rect key="screenRect" x="0.0" y="0.0" width="1352" height="843"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="1352" height="820"/>
             <view key="contentView" id="981">
                 <rect key="frame" x="0.0" y="0.0" width="326" height="271"/>
                 <autoresizingMask key="autoresizingMask"/>
@@ -1869,7 +1858,7 @@ DQ
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                     <popUpButtonCell key="cell" type="push" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" id="987">
                                         <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
-                                        <font key="font" metaFont="menu"/>
+                                        <font key="font" metaFont="message"/>
                                         <menu key="menu" title="OtherViews" id="988"/>
                                     </popUpButtonCell>
                                 </popUpButton>
@@ -1953,7 +1942,7 @@ Gw
         <window title="Winetricks" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" animationBehavior="default" id="1659">
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES"/>
             <rect key="contentRect" x="523" y="312" width="803" height="699"/>
-            <rect key="screenRect" x="0.0" y="0.0" width="1352" height="843"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="1352" height="820"/>
             <view key="contentView" id="1660">
                 <rect key="frame" x="0.0" y="0.0" width="803" height="699"/>
                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -2128,7 +2117,7 @@ DQ
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <popUpButtonCell key="cell" type="smallSquare" bezelStyle="smallSquare" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" pullsDown="YES" selectedItem="1751" id="1749">
                                                 <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                                <font key="font" metaFont="menu"/>
+                                                <font key="font" metaFont="message"/>
                                                 <menu key="menu" title="OtherViews" id="1750">
                                                     <items>
                                                         <menuItem state="on" image="NSActionTemplate" hidden="YES" id="1751">
@@ -2263,7 +2252,7 @@ Gw
         <window title="Custom Executable Launcher Maker" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" animationBehavior="default" id="1001">
             <windowStyleMask key="styleMask" titled="YES"/>
             <rect key="contentRect" x="613" y="450" width="596" height="249"/>
-            <rect key="screenRect" x="0.0" y="0.0" width="1352" height="843"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="1352" height="820"/>
             <view key="contentView" id="1002">
                 <rect key="frame" x="0.0" y="0.0" width="596" height="249"/>
                 <autoresizingMask key="autoresizingMask"/>
@@ -2393,7 +2382,7 @@ Gw
         <window title="Help" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" hidesOnDeactivate="YES" releasedWhenClosed="NO" visibleAtLaunch="NO" animationBehavior="default" id="1352">
             <windowStyleMask key="styleMask" titled="YES" closable="YES"/>
             <rect key="contentRect" x="801" y="655" width="260" height="160"/>
-            <rect key="screenRect" x="0.0" y="0.0" width="1352" height="843"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="1352" height="820"/>
             <view key="contentView" id="1353">
                 <rect key="frame" x="0.0" y="0.0" width="260" height="160"/>
                 <autoresizingMask key="autoresizingMask"/>
@@ -2596,7 +2585,7 @@ Gw
         <window title="About" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" animationBehavior="default" id="1364">
             <windowStyleMask key="styleMask" titled="YES" closable="YES"/>
             <rect key="contentRect" x="827" y="573" width="203" height="223"/>
-            <rect key="screenRect" x="0.0" y="0.0" width="1352" height="843"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="1352" height="820"/>
             <view key="contentView" id="1365">
                 <rect key="frame" x="0.0" y="0.0" width="203" height="223"/>
                 <autoresizingMask key="autoresizingMask"/>
@@ -2817,7 +2806,6 @@ For more information see
                 <outlet property="gammaSlider" destination="564" id="677"/>
                 <outlet property="geckoButtonPressed" destination="E6j-gW-Wpp" id="OkV-H3-CZC"/>
                 <outlet property="geckoCheckBoxButton" destination="sG4-gn-63G" id="62F-SZ-eBc"/>
-                <outlet property="gptkCheckBoxButton" destination="zVI-Ry-XTv" id="o5T-9u-2GP"/>
                 <outlet property="helpWindow" destination="1352" id="1360"/>
                 <outlet property="iconBrowseButton" destination="718" id="825"/>
                 <outlet property="iconImageView" destination="716" id="784"/>
@@ -2901,7 +2889,7 @@ For more information see
         <window title="Modify Mappings" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" restorable="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" animationBehavior="default" id="1579">
             <windowStyleMask key="styleMask" titled="YES"/>
             <rect key="contentRect" x="607" y="514" width="700" height="373"/>
-            <rect key="screenRect" x="0.0" y="0.0" width="1352" height="843"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="1352" height="820"/>
             <view key="contentView" id="1580">
                 <rect key="frame" x="0.0" y="0.0" width="700" height="373"/>
                 <autoresizingMask key="autoresizingMask"/>

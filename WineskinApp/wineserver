@@ -26,13 +26,6 @@ export WINETRICKS_FALLBACK_LIBRARY_PATH="$(dirname "$0")/../../../Frameworks:$(d
 export GST_PLUGIN_PATH="$(dirname "$0")/../../../Frameworks/GStreamer.framework/Libraries/gstreamer-1.0"
 export WINESKINPATH="$(dirname "$0")/../../../SharedSupport/wine/bin"
 export WINEPREFIX="${WINEPREFIX:-$(dirname "$0")/../../../SharedSupport/prefix}"
-
-if [[ ${OSTYPE:6} -ge 23 && "$(/usr/bin/env arch -x86_64 /usr/sbin/sysctl -in sysctl.proc_translated)" = "1" && -n "${WINED3DMETAL}" ]]; then
-    export D3DMETALPATH="$(dirname "$0")/../../../Frameworks/d3dmetal/wine"
-    export WINETRICKS_FALLBACK_LIBRARY_PATH="$(dirname "$0")/../../../Frameworks/moltenvkcx:${WINETRICKS_FALLBACK_LIBRARY_PATH}"
-    export WINEDLLOVERRIDES="*dxgi,*d3d10core,*d3d11,*d3d12=b"
-fi
-
 export DYLD_FALLBACK_LIBRARY_PATH="${WINETRICKS_FALLBACK_LIBRARY_PATH}"
 
 # .Net 7 and later segfault under Rosetta2
