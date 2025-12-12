@@ -58,9 +58,6 @@
     NSString *wineEsync;
     NSString *wineMsync;
 
-    NSString *d3dmetalFold;
-    NSString *appleD3DMETAL;
-    NSString *appleD3EMETAL_FORCE;
     NSString *metalHUD;
     NSString *moltenvkcxFold;
 

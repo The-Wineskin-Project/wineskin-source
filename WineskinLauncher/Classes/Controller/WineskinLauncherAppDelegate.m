@@ -86,7 +86,6 @@ static NSPortManager* portManager;
     contentsFold = [NSString stringWithFormat:@"%@/Contents",appNameWithPath];
     resourcesFold = [NSString stringWithFormat:@"%@/Resources",contentsFold];
     frameworksFold = [NSString stringWithFormat:@"%@/Frameworks",contentsFold];
-    d3dmetalFold = [NSString stringWithFormat:@"%@/d3dmetal",frameworksFold];
     moltenvkcxFold = [NSString stringWithFormat:@"%@/moltenvkcx",frameworksFold];
     sharedsupportFold = [NSString stringWithFormat:@"%@/SharedSupport",contentsFold];
     winePrefix = [NSString stringWithFormat:@"%@/prefix",sharedsupportFold];
@@ -263,9 +262,9 @@ static NSPortManager* portManager;
         debugEnabled = [[self.portManager plistObjectForKey:WINESKIN_WRAPPER_PLIST_KEY_DEBUG_MODE] intValue];
 
         if ([[self.portManager plistObjectForKey:WINESKIN_WRAPPER_PLIST_KEY_MOLTENVK_CX] intValue] == 1) {
-            dyldFallBackLibraryPath = [NSString stringWithFormat:@"%@:%@/lib:%@/lib/external:%@/lib64:%@/external:%@:/opt/wine/lib:%@:/usr/lib:/usr/libexec:/usr/lib/system:/opt/X11/lib",moltenvkcxFold,pathToWineFolder,pathToWineFolder,pathToWineFolder,d3dmetalFold,frameworksFold,gstreamerFold];
+            dyldFallBackLibraryPath = [NSString stringWithFormat:@"%@:%@/lib:%@/lib/external:%@/lib64:%@:/opt/wine/lib:%@:/usr/lib:/usr/libexec:/usr/lib/system:/opt/X11/lib",moltenvkcxFold,pathToWineFolder,pathToWineFolder,pathToWineFolder,frameworksFold,gstreamerFold];
         } else {
-            dyldFallBackLibraryPath = [NSString stringWithFormat:@"%@/lib:%@/lib/external:%@/lib64:%@/external:%@:/opt/wine/lib:%@:/usr/lib:/usr/libexec:/usr/lib/system:/opt/X11/lib",pathToWineFolder,pathToWineFolder,pathToWineFolder,d3dmetalFold,frameworksFold,gstreamerFold];
+            dyldFallBackLibraryPath = [NSString stringWithFormat:@"%@/lib:%@/lib/external:%@/lib64:%@:/opt/wine/lib:%@:/usr/lib:/usr/libexec:/usr/lib/system:/opt/X11/lib",pathToWineFolder,pathToWineFolder,pathToWineFolder,frameworksFold,gstreamerFold];
         }
         //1st (app)/Contents/SharedSupport/wine/lib/
         //2nd (app)/Contents/SharedSupport/wine/lib/external/
@@ -284,18 +283,6 @@ static NSPortManager* portManager;
 
         //Custom wine env
         HIDEBOOT  = @"WINEBOOT_HIDE_DIALOG=1";
-
-        //TODO: D3DMetal
-        //Allow the use of D3DMetal in supported Engines, doesn't need to be bundled inside the Engines
-        if ([[self.portManager plistObjectForKey:WINESKIN_WRAPPER_PLIST_KEY_D3DMETAL] intValue] == 1) {
-            if ([[self.portManager plistObjectForKey:WINESKIN_WRAPPER_PLIST_KEY_D3DMETAL_FORCE] intValue] == 1) {
-                appleD3DMETAL = [NSString stringWithFormat:@"WINEDLLOVERRIDES=\"*dxgi,*d3d10core,*d3d11,*d3d12=b\" D3DMETALPATH=\"%@\"/wine",d3dmetalFold];
-            } else {
-                appleD3DMETAL = [NSString stringWithFormat:@"D3DMETALPATH=\"%@\"/wine",d3dmetalFold];
-            }
-        } else {
-            appleD3DMETAL = @"";
-        }
 
         //TODO: MTL_HUD_ENABLED
         if ([[self.portManager plistObjectForKey:WINESKIN_WRAPPER_PLIST_KEY_METAL_HUD] intValue] == 1) {
@@ -1055,7 +1042,6 @@ static NSPortManager* portManager;
                 [NSString stringWithFormat:@"export PATH=\"%@/:/usr/bin:/bin:/usr/sbin:/sbin\";",pathToWineBinFolder],
                 [NSString stringWithFormat:@"export WINEPREFIX=\"%@\";",winePrefix],
                 [NSString stringWithFormat:@"DYLD_FALLBACK_LIBRARY_PATH=\"%@\"",dyldFallBackLibraryPath],
-                [NSString stringWithFormat:@"%@",appleD3DMETAL],
                 [NSString stringWithFormat:@"%@",HIDEBOOT],
                 [NSString stringWithFormat:@"%@ wineboot -u",wineExecutable]];
             [self systemCommand:[command componentsJoinedByString:@" "]];
@@ -1069,7 +1055,6 @@ static NSPortManager* portManager;
                 [NSString stringWithFormat:@"export PATH=\"%@/:/usr/bin:/bin:/usr/sbin:/sbin\";",pathToWineBinFolder],
                 [NSString stringWithFormat:@"export WINEPREFIX=\"%@\";",winePrefix],
                 [NSString stringWithFormat:@"DYLD_FALLBACK_LIBRARY_PATH=\"%@\"",dyldFallBackLibraryPath],
-                [NSString stringWithFormat:@"%@",appleD3DMETAL],
                 [NSString stringWithFormat:@"wineserver -w"]];
             [self systemCommand:[postcommand componentsJoinedByString:@" "]];
 
@@ -1107,7 +1092,6 @@ static NSPortManager* portManager;
                     [NSString stringWithFormat:@"export PATH=\"%@:/usr/bin:/bin:/usr/sbin:/sbin\";",pathToWineBinFolder],
                     [NSString stringWithFormat:@"export WINEPREFIX=\"%@\";",winePrefix],
                     [NSString stringWithFormat:@"DYLD_FALLBACK_LIBRARY_PATH=\"%@\"",dyldFallBackLibraryPath],
-                    [NSString stringWithFormat:@"%@",appleD3DMETAL],
                     [NSString stringWithFormat:@"%@ regedit \"%@/Wineskin.app/Contents/Resources/remakedefaults.reg\" > \"/dev/null\" 2>&1",wineExecutable, contentsFold]];
                 [self systemCommand:[loadRegCommand componentsJoinedByString:@" "]];
                 usleep(5000000);
@@ -1216,9 +1200,9 @@ static NSPortManager* portManager;
             {
                 //TODO: Change winetricks to NSArray
                 // just getting a list of verbs
-                [self systemCommand:[NSString stringWithFormat:@"export WINETRICKS_FALLBACK_LIBRARY_PATH=\"%@\";export WINEDEBUG=%@;cd \"%@/Wineskin.app/Contents/Resources\";export PATH=\"$PWD:%@:/usr/bin:/bin:/usr/sbin:/sbin\";export WINEPREFIX=\"%@\";DYLD_FALLBACK_LIBRARY_PATH=\"%@\" %@ winetricks --no-isolate %@ > \"%@/Logs/WinetricksTemp.log\"",dyldFallBackLibraryPath,wineDebugLine,contentsFold,pathToWineBinFolder,winePrefix,dyldFallBackLibraryPath,appleD3DMETAL,[winetricksCommands componentsJoinedByString:@" "],sharedsupportFold]];
+                [self systemCommand:[NSString stringWithFormat:@"export WINETRICKS_FALLBACK_LIBRARY_PATH=\"%@\";export WINEDEBUG=%@;cd \"%@/Wineskin.app/Contents/Resources\";export PATH=\"$PWD:%@:/usr/bin:/bin:/usr/sbin:/sbin\";export WINEPREFIX=\"%@\";DYLD_FALLBACK_LIBRARY_PATH=\"%@\" winetricks --no-isolate %@ > \"%@/Logs/WinetricksTemp.log\"",dyldFallBackLibraryPath,wineDebugLine,contentsFold,pathToWineBinFolder,winePrefix,dyldFallBackLibraryPath,[winetricksCommands componentsJoinedByString:@" "],sharedsupportFold]];
             } else {
-                [self systemCommand:[NSString stringWithFormat:@"export WINETRICKS_FALLBACK_LIBRARY_PATH=\"%@\" %@;export WINEDEBUG=%@;cd \"%@/Wineskin.app/Contents/Resources\";export PATH=\"$PWD:%@:/usr/bin:/bin:/usr/sbin:/sbin\";export WINEPREFIX=\"%@\";%@DYLD_FALLBACK_LIBRARY_PATH=\"%@\" winetricks %@ %@ --no-isolate \"%@\" > \"%@/Logs/Winetricks.log\" 2>&1",dyldFallBackLibraryPath,appleD3DMETAL,wineDebugLine,contentsFold,pathToWineBinFolder,winePrefix,[wineStartInfo getCliCustomCommands],dyldFallBackLibraryPath,forceMode,silentMode,[winetricksCommands componentsJoinedByString:@"\" \""],sharedsupportFold]];
+                [self systemCommand:[NSString stringWithFormat:@"export WINETRICKS_FALLBACK_LIBRARY_PATH=\"%@\";export WINEDEBUG=%@;cd \"%@/Wineskin.app/Contents/Resources\";export PATH=\"$PWD:%@:/usr/bin:/bin:/usr/sbin:/sbin\";export WINEPREFIX=\"%@\";%@DYLD_FALLBACK_LIBRARY_PATH=\"%@\" winetricks %@ %@ --no-isolate \"%@\" > \"%@/Logs/Winetricks.log\" 2>&1",dyldFallBackLibraryPath,wineDebugLine,contentsFold,pathToWineBinFolder,winePrefix,[wineStartInfo getCliCustomCommands],dyldFallBackLibraryPath,forceMode,silentMode,[winetricksCommands componentsJoinedByString:@"\" \""],sharedsupportFold]];
             }
             usleep(5000000); // sometimes it dumps out slightly too fast... just hold for a few seconds
             return;
@@ -1257,7 +1241,6 @@ static NSPortManager* portManager;
                         [NSString stringWithFormat:@"%@",SWIZZLE],
                         [NSString stringWithFormat:@"%@",wineEsync],
                         [NSString stringWithFormat:@"%@",wineMsync],
-                        [NSString stringWithFormat:@"%@",appleD3DMETAL],
                         [NSString stringWithFormat:@"%@",metalHUD],
                         [NSString stringWithFormat:@"%@",FASTMATH],
                         [NSString stringWithFormat:@"%@",DOTNET],
@@ -1277,7 +1260,6 @@ static NSPortManager* portManager;
                          [NSString stringWithFormat:@"%@",SWIZZLE],
                          [NSString stringWithFormat:@"%@",wineEsync],
                          [NSString stringWithFormat:@"%@",wineMsync],
-                         [NSString stringWithFormat:@"%@",appleD3DMETAL],
                          [NSString stringWithFormat:@"%@",metalHUD],
                          [NSString stringWithFormat:@"%@",FASTMATH],
                          [NSString stringWithFormat:@"%@",DOTNET],
@@ -1300,7 +1282,6 @@ static NSPortManager* portManager;
                 [NSString stringWithFormat:@"%@",SWIZZLE],
                 [NSString stringWithFormat:@"%@",wineEsync],
                 [NSString stringWithFormat:@"%@",wineMsync],
-                [NSString stringWithFormat:@"%@",appleD3DMETAL],
                 [NSString stringWithFormat:@"%@",metalHUD],
                 [NSString stringWithFormat:@"%@",FASTMATH],
                 [NSString stringWithFormat:@"%@",DOTNET],
